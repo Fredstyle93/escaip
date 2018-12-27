@@ -13,7 +13,11 @@
                     <h2 class="profil-name">{{$user->firstName}} {{$user->lastName}}</h2>
 
                 </div>
-                <button class="profil-contact-btn"> <span class="sprite sprite-profil-message"></span> Contacter</button>
+                {{--  @if(Auth::user() == $user )
+                    <a href="{{route('user.edit')}}" class="profil-modify-btn">Modifier le profil</a>
+                @elseif(Auth::user() != $user)
+                    <button class="profil-contact-btn"> <span class="sprite sprite-profil-message"></span> Contacter</button>
+                @endif  --}}
             </div>
         </div>
 
@@ -88,83 +92,6 @@
                     </div>
                 
                 
-                    <div class="content-grid col-12 col-sm-6 col-md-4 col-xl-3">
-                        <a href="article.html" class="article-link">
-                            <div class="historic-article article-image">
-                                <div class="article-bg-title">
-                                    <p class="article-title">
-                                        Titre de l'article
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="content-grid col-12 col-sm-6 col-md-4 col-xl-3">
-                        <a href="article.html" class="article-link">
-                            <div class="historic-article article-image">
-                                <div class="article-bg-title">
-                                    <p class="article-title">
-                                        Titre de l'article
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="content-grid col-12 col-sm-6 col-md-4 col-xl-3">
-                        <a href="article.html" class="article-link">
-                            <div class="historic-article article-image">
-                                <div class="article-bg-title">
-                                    <p class="article-title">
-                                        Titre de l'article
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="content-grid col-12 col-sm-6 col-md-4 col-xl-3">
-                        <a href="article.html" class="article-link">
-                            <div class="historic-article article-image">
-                                <div class="article-bg-title">
-                                    <p class="article-title">
-                                        Titre de l'article
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="content-grid col-12 col-sm-6 col-md-4 col-xl-3">
-                        <a href="article.html" class="article-link">
-                            <div class="historic-article article-image">
-                                <div class="article-bg-title">
-                                    <p class="article-title">
-                                        Titre de l'article
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="content-grid col-12 col-sm-6 col-md-4 col-xl-3">
-                        <a href="article.html" class="article-link">
-                            <div class="historic-article article-image">
-                                <div class="article-bg-title">
-                                    <p class="article-title">
-                                        Titre de l'article
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="content-grid col-12 col-sm-6 col-md-4 col-xl-3">
-                        <a href="article.html" class="article-link">
-                            <div class="historic-article article-image">
-                                <div class="article-bg-title">
-                                    <p class="article-title">
-                                        Titre de l'article
-                                    </p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
                     <div class="content-grid col-12 col-sm-6 col-md-4 col-xl-3">
                         <a href="article.html" class="article-link">
                             <div class="historic-article article-image">
