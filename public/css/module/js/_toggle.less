@@ -1,0 +1,90 @@
+@import '../variables/_variables';
+
+    
+    .toggle-navigation {
+        position: fixed;
+        top: 60px;
+        left: -200px;
+        width: 200px;
+        height: 100vh;
+        background: @white;
+        transition: .5s;
+        text-align: center;
+        font-weight: 600;
+        z-index: 999999;
+        .toggle-menu {
+            background: @purple;
+            padding: 1em 1em 1.5em 1em;
+            .toggle-menu-items {
+                //display: inline-block;
+                font-size: 11px;
+                padding: 10px;
+                margin-top: 15px;
+                color: @purple;
+                text-decoration: none;
+                &:nth-child(3) {
+                    padding: .5em 1em .5em .5em;
+                    margin-left: 19px;
+                    border-right: solid #666666 1px;
+                }
+                
+                .toggle-menu-items-link{
+                    color: @white;
+                    font-weight: 700;
+                    
+                    &:hover,
+                    &:active {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+    .toggle-sidebar {
+        width: 200px;
+        padding-top: 20px;
+//        background-color: @greyPale;
+        color: @fontColor;
+        font-weight: 100;
+        .toggle-sidebar-menu-section {
+            &:first-child {
+                padding-top: 25px;
+            }
+            &:nth-child(1),
+            &:nth-child(2) {
+                padding-bottom: 25px;
+            }
+            &:nth-child(2),
+            &:nth-child(3) {
+                padding-top: 25px;
+//                border-top: solid 1px @borderGrey;
+            }
+            .toggle-sidebar-menu-link{
+//                margin-bottom: 40px;
+                text-decoration: none;
+                color: @fontColor;
+                
+            .toggle-sidebar-menu-items {
+                // display: inline-block;
+                margin-bottom: 20px;
+                padding: 12px 1em 12px 20px;
+                border-radius: 4px;
+                text-align: left;
+                &:hover {
+                    background-color: @asideHover;
+                    text-decoration: none;
+                }
+                .icon {
+                    margin-right: 28px;
+                }
+            }
+            }
+        }
+    }
+//@media(min-width:@pad) {
+//    .toogle-logo, .burger-menu, .toggle-navigation{
+//        display: none;
+//    }
+//    
+//    
+//    }

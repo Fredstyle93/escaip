@@ -1,0 +1,296 @@
+@import 'variables/_variables';
+.profil-container {
+    padding: 0 30px;
+}
+.profil-container-history {
+    padding: 25px 60px;
+}
+
+.profil-contact-btn {
+    //        width: 125px;
+    padding: 5px 10px;
+    margin-top: 17px;
+    color: @white;
+    background-color: @purple;
+    border: 1px solid @purple;
+    border-radius: 6px;
+    font-size: 1em;
+    font-weight: 500;
+    float: right;
+    // display: inline-block;
+    transition: .25s;
+    &:hover {
+        background-color: @white;
+        color: @purple;
+        cursor: pointer;
+    }
+//        @media(min-width:@mobile) {
+//            float: right;
+//            //                margin-top: 85px;
+//        }
+//        @media(max-width:@mobile) {
+//            margin-top: 5px;
+//        }
+}
+.profil-modify-btn{
+    color: @purple;
+    float: right;
+    margin-top: 25px;
+}
+
+.profil {
+    // color:@white;
+    h4 {
+        font-size: 1.2rem;
+        color: @purple;
+    }
+    .profil-header {
+        padding-bottom: 9px;
+        border-bottom: @borderPurple;
+        .profil-header-img {
+            width: 100%;
+            height: 150px;
+            background-image: url(../../../img/user_couverture/forest.jpg);
+            background-size: cover;
+            background-position-y: -70px;
+            border-top-left-radius: @borderRadius;
+            border-top-right-radius: @borderRadius;
+            
+//            @media(max-width:@mobile){
+//                height: 90px;
+//            }
+        }
+        .profil-container-image {
+            //            padding-left: 1px;
+            margin: 0 auto;
+            .profil-image {
+                max-width: 115px;
+                border-radius: 100%;
+                position: absolute;
+                top: 90px;
+//                @media(max-width:@mobile) {
+//                    width: 90px;
+//                }
+            }
+            .profil-add-contact{
+                width: 28px;
+                height: 28px;
+                background-color: @purple;
+                border-radius: 100%;
+                border: solid 2px @white;
+                position: absolute;
+                top: 164px;
+                left: 125px;
+            }
+//            @media(min-width:@mobile) {
+//                max-width: 130px;
+//                display: inline-block;
+//                //                margin: 0 20px 10px 0;
+//            }
+        }
+    }
+    .profil-infos {
+        display: inline-block;
+        margin-left: 115px;
+        padding: 15px;
+        //        position: relative;
+        //        transition: .5s;
+        //        width: 80%; //****ajouter le btn contacter en float right au meme niveau que .school
+        .profil-name {
+            font-size: 1.4em;
+            font-weight: 700;
+            // color: @fontColorDark;
+            //                margin: 10px 0 3px 20px;
+            @media(max-width: @mobile) {
+                font-size: 1em;
+            }
+        }
+        .icon-school {
+            display: inline-block;
+        }
+        .profil-school {
+            display: inline-block;
+            font-size: 12px;
+            //display: inline-block;
+        }
+        
+    }
+    .profil-contact-btn{
+        @media(max-width:@mobile){
+            margin-top: 13px;
+        }
+    }
+    .profil-details {
+        padding: 25px 0px 25px 60px;
+        border-bottom: @borderPurple;
+        .profil-details-list {
+            margin: 0 auto;
+            border-right: @borderPurple;
+            font-weight: bold;
+            color: @fontColor;
+            .details-elements {
+                margin-bottom: 25px;
+                .scholarship-list {
+                    margin-left: 15px;
+                    .scholarship-list-elements {
+                        margin: 10px;
+                    }
+                }
+                .knowledge-list {
+                    margin-left: 15px;
+                    .knowledge-list-elements {
+                        margin: 10px;
+                    }
+                }
+            }
+        }
+        .profil-stats-list {
+            margin: 0 auto;
+            //            height: 
+            .stats-elements {
+                max-width: 170px;
+                margin: 0 auto;
+                padding-bottom: 3%;
+                .stats-number {
+                    width: 40px;
+                    height: 40px;
+                    display: inline-block;
+                    border: 1px solid @purple;
+                    border-radius: 100%;
+                    color: @purple;
+                    padding: 10px 0;
+                    font-weight: 600;
+                    text-align: center;
+                    vertical-align: middle;
+                }
+                .stats-name {
+                    display: inline-block;
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+    .profil-contacts {
+        margin-bottom: 20px;
+        .profil-contacts-container {
+            width: 600px;
+            margin: 0 auto;
+            padding: 10px 0;
+            border-bottom: @borderPurple;
+            
+            
+            .see-contacts-link{
+                
+                &:hover{
+                    background-color: @greyPale;
+                    text-decoration: none;
+                    display: block;
+                }
+                .see-contacts {
+                    text-align: center;
+                    padding: 5px 0;
+                    .contacts-image {
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 100%;
+                        border: 2px solid @white;
+                        &:nth-child(2),
+                        &:nth-child(3){
+                            margin-left: -10px;
+
+                        }
+                    }
+                    .contacts-number{
+                        font-weight: 600;
+                        color: @purple;
+                    }
+                }
+            }
+            .see-contacts{
+                text-align: center;
+            }
+        }
+    }
+    .profil-description {
+        padding: 25px 60px;
+        margin-bottom: @marginB;
+        .description-text {
+            text-align: justify left;
+            line-height: 37px;
+            @media(max-width: @mobileCorrection) {
+                line-height: 25px;
+            }
+        }
+    }
+    .buttons-container{
+        // width: 700px;
+        // margin: 0 auto;
+        margin-bottom: @marginB;
+        .profil-button-container {
+            display: inline-block;
+            
+            .profil-button {
+                padding: 40px 70px;
+                border: @borderPurpleDark;
+                display: inline-block;
+                font-size: 1.4rem;
+                border-radius: 25px;
+                color: @purple;
+                // .calendar-button-name {
+                    
+                // }
+                
+                // .portfolio-button-name {
+                //     color: @purple;
+                // }
+            }
+        }
+        .portfolio-button{
+            float: right;
+        }
+    }
+        .profil-historique {
+            width: 100%;
+            margin: 0 auto;
+            margin-bottom: @marginB;
+            padding: 0 25px 25px 25px;
+            background-color: @white;
+            border: @borderPurpleDark;
+            border-radius: @borderRadius;
+            .historic-grid {
+                padding-top: 30px;
+                transition: .5s;
+                &:first-child {
+                    margin: 0 auto;
+                    margin-bottom: 15px;
+                    padding-bottom: 10px;
+                    border-bottom: @borderPurple;
+                    
+                    p{
+                        color: @purple;
+                    }
+                }
+                //        .historic-article{
+                display: inline-block;
+                .article-image {
+                    background-image: url(../../img/330px-Homework_-_vector_maths.jpg);
+                    background-size: cover;
+                    width: 160px;
+                    height: 90px;
+                    margin: 0 auto;
+                    .article-bg-title {
+                        position: relative;
+                        top: 57px;
+                        padding: 10px;
+                        background: linear-gradient(to top, black, rgba(0, 0, 0, 0));
+                        .article-title {
+                            font-size: 13px;
+                            font-weight: 600;
+                            color: @white;
+                        }
+                    }
+                }
+                //            }
+            }
+        }
+}

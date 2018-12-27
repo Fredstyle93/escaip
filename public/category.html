@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Fabrice Garrec</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <script src="less.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(".burger-menu").click(function() {
+                $(".burger-menu").toggleClass("is-active")
+            })
+            $(".burger-menu").click(function() {
+                $(".toggle-navigation").toggleClass("is-active")
+            })
+            $(".burger-menu").click(function() {
+                $(".hide").toggleClass("is-active")
+            })
+            $(".hide").click(function() {
+                $(".hide").removeClass("is-active")
+            })
+            $(".hide").click(function() {
+                $(".burger-menu").removeClass("is-active")
+            })
+            $(".hide").click(function() {
+                $(".toggle-navigation").removeClass("is-active")
+            })
+        })
+
+    </script>
+
+
+</head>
+
+<body>
+    <!-- --------------------------------- NAV BAR --------------------------------- -->
+
+    <div class="navbar">
+        <div class="l-container">
+            <div class="navbar-logo">
+                <img src="img/logo/logo.png" class="logo" alt="nomSite">
+            </div>
+
+            <div class="navbar-menu">
+                <div class="navbar-menu-log" id="click">
+                    <img src="img/users/user03.jpg" alt="" class="profil-img-navbar">
+                    <div class="navbar-arrow"></div>
+                </div>
+                <div class="subnav" >
+                    <nav class="subnav-nav">
+                        <ul class="subnav-list">
+                            <li class="subnav-list-items"><span></span>Aide</li>
+                            <li class="subnav-list-items"><span></span>Paramètre</li>
+                            <li class="subnav-list-items"><span></span>Nous contacter</li>
+                            <li class="subnav-list-items"><span></span>Se déconnecter</li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="burger-menu">
+                    <span class="burger-menu-bar"></span>
+                    <span class="burger-menu-bar"></span>
+                    <span class="burger-menu-bar"></span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- --------------------------------- TOGGLE NAVIGATION --------------------------------- -->
+    <div class="toggle-navigation">
+        <ul class="toggle-menu">
+            <li class="toggle-menu-items"><a href="" class="toggle-menu-items-link">S'inscrire</a></li>
+            <li class="toggle-menu-items"><a href="" class="toggle-menu-items-link">Se connecter</a></li>
+        </ul>
+
+        <div class="toggle-sidebar">
+            <nav class="toggle-sidebar-nav">
+                <ul class="toggle-sidebar-menu">
+                    <div class="toggle-sidebar-menu-section">
+                        <a href="index.html" class="toggle-sidebar-menu-link">
+                            <li class="toggle-sidebar-menu-items">
+                                <img src="img/icones/home.svg" class="icon icon-home" alt=""> Accueil
+                            </li>
+                        </a>
+                        <a href="profil.html" class="toggle-sidebar-menu-link">
+                            <li class="toggle-sidebar-menu-items">
+                                <img src="img/profil.jpg" class="icon icon-profil" alt=""> Mon profil
+                            </li>
+                        </a>
+                        <a href="categorie.html" class="toggle-sidebar-menu-link">
+                            <li class="toggle-sidebar-menu-items">
+                                <img src="img/icones/fair-stand.svg" class="icon" alt=""> Catégories
+                            </li>
+                        </a>
+                    </div>
+
+                </ul>
+            </nav>
+
+
+        </div>
+
+    </div>
+    <div class="hide"></div>
+
+    <!-- --------------------------------- CONTENT --------------------------------- -->
+    <div class="content">
+        <div class="l-container">
+            <!-- --------------------------------- ARIANE --------------------------------- -->
+            <div class="ariane row">
+                <ul class="ariane-list col-12 col-lg-9 offset-lg-3">
+                    <span class="ariane-list-nomPage">Catégorie </span>
+                </ul>
+            </div>
+            <div class="row">
+                <!-- --------------------------------- SIDEBAR --------------------------------- -->
+                <div class="sidebar col-lg-3">
+                    <nav class="sidebar-nav">
+                        <ul class="sidebar-menu">
+                            <div class="sidebar-menu-section">
+                                <a href="index_auth.html" class="sidebar-menu-link">
+                                    <li class="sidebar-menu-items">
+                                        <span class="sprite sprite-sidebar-home"></span> <span class="sidebar-menu-items-name">Accueil</span>
+                                    </li>
+                                </a>
+                                <a href="profil.html" class="sidebar-menu-link">
+                                    <li class="sidebar-menu-items locked">
+                                        <div class="bg-locked">
+                                            <img src="img/users/user03.jpg" alt="" class="profil-img-sidebar">
+                                        </div>
+                                        <span class="sidebar-menu-items-name">Mon profil</span>
+                                    </li>
+                                </a>
+                            </div>
+                            <ul class="sidebar-menu-section">
+                                <a href="category.html" class="sidebar-menu-link">
+                                    <li class="sidebar-menu-items sidebar-menu-items-selected">
+                                        <span class="sprite sprite-sidebar-learning"></span> <span class="sidebar-menu-items-name">Cours</span>
+                                    </li>
+                                </a>
+                                
+                                <a href="calendar.html" class="sidebar-menu-link">
+                                    <li class="sidebar-menu-items">
+                                        <span class="sprite sprite-sidebar-calendar"></span> <span class="sidebar-menu-items-name">Calendrier</span>
+                                    </li>
+                                </a>
+                                <a href="portfolio.html" class="sidebar-menu-link">
+                                    <li class="sidebar-menu-items">
+                                        <span class="sprite sprite-sidebar-portfolio"></span> <span class="sidebar-menu-items-name">Portfolios</span>
+                                    </li>
+                                </a>
+                            </ul>
+                        </ul>
+                    </nav>
+
+
+                </div>
+                <!-- --------------------------------- CATEGORIES --------------------------------- -->
+                <div class="col-12 col-lg-9 offset-lg-3">
+                    <div class="categories content-container row">
+                        <h2 class="categories-title col-12">Que voulez-vous apprendre?</h2>
+                        <div class="categories-items col-12 col-md-6 col-lg-4">
+                            <a href="articleCategory.html">
+                                   <div class="categories-items-container row">
+                                    <div class="categories-items-image-wrapper col-5 col-lg-12">
+                                        <img src="img/fr.jpg" class="categories-image" alt="">
+                                    </div>
+                                    <div class="categories-items-title col-7 col-lg-12">
+                                        <h4>Français</h4>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>       
+                        <div class="categories-items col-12 col-md-6 col-lg-4">
+                            <a href=""><div class="categories-items-container row">
+                                    <div class="categories-items-image-wrapper col-5 col-lg-12">
+                                        <img src="img/lauren-mancke-60627.jpg" class="categories-image" alt="">
+                                    </div>
+                                    <div class="categories-items-title col-7 col-lg-12">
+                                        <h4>Comptabilité</h4>
+                                    </div>
+                                </div></a>
+                        </div>       
+                        <div class="categories-items col-12 col-md-6 col-lg-4">
+                            <a href=""><div class="categories-items-container row">
+                                    <div class="categories-items-image-wrapper col-5 col-lg-12">
+                                        <img src="img/math.png" class="categories-image" alt="">
+                                    </div>
+                                    <div class="categories-items-title col-7 col-lg-12">
+                                        <h4>Mathématique</h4>
+                                    </div>
+                                </div></a>
+                        </div> 
+                        <div class="categories-items col-12 col-md-6 col-lg-4">
+                            <a href=""><div class="categories-items-container row">
+                                    <div class="categories-items-image-wrapper col-5 col-lg-12">
+                                        <img src="img/math.png" class="categories-image" alt="">
+                                    </div>
+                                    <div class="categories-items-title col-7 col-lg-12">
+                                        <h4>Mathématique</h4>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>  
+                        <div class="categories-items col-12 col-md-6 col-lg-4">
+                            <a href="">
+                                   <div class="categories-items-container row">
+                                    <div class="categories-items-image-wrapper col-5 col-lg-12">
+                                        <img src="img/fr.jpg" class="categories-image" alt="">
+                                    </div>
+                                    <div class="categories-items-title col-7 col-lg-12">
+                                        <h4>Français</h4>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>       
+                        <div class="categories-items col-12 col-md-6 col-lg-4">
+                            <a href=""><div class="categories-items-container row">
+                                    <div class="categories-items-image-wrapper col-5 col-lg-12">
+                                        <img src="img/lauren-mancke-60627.jpg" class="categories-image" alt="">
+                                    </div>
+                                    <div class="categories-items-title col-7 col-lg-12">
+                                        <h4>Comptabilité</h4>
+                                    </div>
+                                </div></a>
+                        </div>       
+                        <div class="categories-items col-12 col-md-6 col-lg-4">
+                            <a href=""><div class="categories-items-container row">
+                                    <div class="categories-items-image-wrapper col-5 col-lg-12">
+                                        <img src="img/math.png" class="categories-image" alt="">
+                                    </div>
+                                    <div class="categories-items-title col-7 col-lg-12">
+                                        <h4>Mathématique</h4>
+                                    </div>
+                                </div></a>
+                        </div> 
+                        <div class="categories-items col-12 col-md-6 col-lg-4">
+                            <a href=""><div class="categories-items-container row">
+                                    <div class="categories-items-image-wrapper col-5 col-lg-12">
+                                        <img src="img/math.png" class="categories-image" alt="">
+                                    </div>
+                                    <div class="categories-items-title col-7 col-lg-12">
+                                        <h4>Mathématique</h4>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="categories-items col-12 col-md-6 col-lg-4">
+                            <a href="">
+                                   <div class="categories-items-container row">
+                                    <div class="categories-items-image-wrapper col-5 col-lg-12">
+                                        <img src="img/fr.jpg" class="categories-image" alt="">
+                                    </div>
+                                    <div class="categories-items-title col-7 col-lg-12">
+                                        <h4>Français</h4>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>       
+                        <div class="categories-items col-12 col-md-6 col-lg-4">
+                            <a href=""><div class="categories-items-container row">
+                                    <div class="categories-items-image-wrapper col-5 col-lg-12">
+                                        <img src="img/lauren-mancke-60627.jpg" class="categories-image" alt="">
+                                    </div>
+                                    <div class="categories-items-title col-7 col-lg-12">
+                                        <h4>Comptabilité</h4>
+                                    </div>
+                                </div></a>
+                        </div>       
+                        <div class="categories-items col-12 col-md-6 col-lg-4">
+                            <a href=""><div class="categories-items-container row">
+                                    <div class="categories-items-image-wrapper col-5 col-lg-12">
+                                        <img src="img/math.png" class="categories-image" alt="">
+                                    </div>
+                                    <div class="categories-items-title col-7 col-lg-12">
+                                        <h4>Mathématique</h4>
+                                    </div>
+                                </div></a>
+                        </div> 
+                        <div class="categories-items col-12 col-md-6 col-lg-4">
+                            <a href=""><div class="categories-items-container row">
+                                    <div class="categories-items-image-wrapper col-5 col-lg-12">
+                                        <img src="img/math.png" class="categories-image" alt="">
+                                    </div>
+                                    <div class="categories-items-title col-7 col-lg-12">
+                                        <h4>Mathématique</h4>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-container">
+            <img src="img/logo/logo.png" alt="Escaip" class="footer-logo">
+        </div>
+    </footer>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+<script>
+    var $buoop = {
+        notify: {
+            i: -5,
+            f: -4,
+            o: -4,
+            s: -2,
+            c: -4
+        },
+        insecure: true,
+        api: 5
+    };
+
+    function $buo_f() {
+        var e = document.createElement("script");
+        e.src = "//browser-update.org/update.min.js";
+        document.body.appendChild(e);
+    };
+    try {
+        document.addEventListener("DOMContentLoaded", $buo_f, false)
+    } catch (e) {
+        window.attachEvent("onload", $buo_f)
+    }
+
+</script>
+
+</html>

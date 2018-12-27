@@ -1,0 +1,130 @@
+@import '../../variables/_variables';
+
+.project{
+    padding: 20px;
+    .project-header{
+        .project-image-container{
+            width: 130px;
+            height: 110px;
+            overflow: hidden;
+            
+            @media(max-width:@mobile){
+                margin: 0 auto;
+            }
+            @media(min-width:@mobile){
+                display: inline-block;
+            }
+            .project-image{
+                position: relative;
+                top: -372px;
+                left: -614px;
+                
+                
+                @media(min-width:@mobile){
+                    top: -318px;
+                    left: -573px;
+                }
+                
+            }
+            @media(min-width:@mobile){
+                    width: 230px;
+                    height: 176px;
+            }
+            @media(min-width:@pad){
+                width: 300px;
+                height: 227px;
+            }
+        }
+        .project-infos{
+            .project-primary-infos{
+                text-align: left;
+                margin-top: 25px;
+                padding-bottom: 15px;
+//                padding-left: 30px;
+                border-bottom: @borderPurple;
+                .project-title{
+                    color: @purple;
+                        display:inline-block;
+                    @media(min-width:@mobile){
+                        font-size: 1.3rem;
+                    }
+                    
+                }
+                .published-time{
+                    font-size: .7rem;
+                    
+                        display:inline-block;
+                    @media(min-width:@mobile){
+                        margin-left: 15px;
+                    }
+                }
+                .project-nbViews{
+                    float: right;
+                }
+                .project-btn{
+                    margin-top: -11px;
+                }
+                @media(min-width:@pad){
+//                    text-align: left;
+                    margin-left: 30px;
+                }
+            }
+            .project-secondary-infos{
+//                border-bottom: @borderPurple;
+                margin: 30px 0 0 30px;
+                
+                strong{
+                    display: inline-block;
+                    font-size: .8rem;
+                    
+                    &:first-child{
+                        padding: 0 0 5px 0;
+                        margin-bottom: 10px;
+                        border-bottom: @borderPurple;
+                    }
+                    &:nth-child(2){
+                        margin-left: 20px;
+                        font-size: .7rem;
+                    }
+                }
+                .project-techno-list{
+                    display: block;
+                    .project-techno-list-items{
+                        list-style: inside;
+                        padding: 5px;
+                        font-size: .7rem;
+                    }
+                }
+            }
+            @media(min-width:@mobile){
+                display: inline-block;
+                vertical-align: top;
+            }
+        }
+        
+    }
+    .project-content{
+            padding-top: 45px;
+            
+            .project-description{
+                line-height: 30px;
+            }
+        }
+    .project-gallery{
+        padding-top: 30px;
+        div{
+            max-width:230px ;
+            max-height:150px; 
+            margin: 0 auto;
+            margin-top: 40px;
+            
+            img{
+                max-width:230px ;
+                max-height:150px;
+            }
+        }
+    }
+}
+
+//width: 300px;
+//            height: 260px;

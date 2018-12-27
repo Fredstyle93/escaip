@@ -1,0 +1,39 @@
+@import "variables/_variables";
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: @white;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: @fontColor;
+    
+}
+div{
+    vertical-align: middle;
+}
+a{
+    color: @fontColor;
+    text-decoration: none;
+    
+    &:hover,
+    &:active{
+        color: @fontColor;
+        text-decoration: underline;
+    }
+}
+ul, li{
+     list-style: none;
+}
+
+label{    
+    display: block;
+    font-weight: 500;
+}
+input{
+    border: @border;
+    border-radius: calc(@borderRadius / 2);
+}
+
+.bouton-bizarre{
+    margin-left: 80px;
+}

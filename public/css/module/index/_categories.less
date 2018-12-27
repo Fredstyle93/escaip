@@ -1,0 +1,36 @@
+@import '../../variables/_variables';
+
+.popular-categories{
+    padding: 10px 20px;
+    .categories-items-feed{
+        margin: 0 auto;
+        margin-bottom: 15px;
+        max-width: 270px;
+        border-radius: 10px;
+        border: @borderPurpleDark;
+
+        &:hover .categories-image{
+            opacity: .3;
+            transition: .5s;
+        }
+        .categories-items-feed-container{
+            .categories-items-feed-image-wrapper{
+                .categories-image{
+                    border-radius: 10px 0 0 10px;
+                    border-right: @borderPurple;
+                    width: 125px;
+                    min-height: 93px;
+                }
+            } 
+            .categories-items-feed-title{
+                margin-top: 35px;
+                color: @purple;
+                text-align: center;
+                h4{
+                    font-size: .8rem;
+                }
+
+            }
+        }
+    }
+}

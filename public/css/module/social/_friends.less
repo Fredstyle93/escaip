@@ -1,0 +1,51 @@
+@import '../../variables/_variables';
+
+
+.profil-friends-title{
+    margin: 15px 0 5px 14px;
+    display: inline-block;
+
+}
+.friends{
+    color:white;
+    .friends-items-container{
+        padding: 5px;
+            .friends-items{
+                padding: 5px;
+                border: @border;
+                border-radius: 5px;
+                
+                .friends-infos-list{
+                    display: inline-block;
+                    .friends-items-name{
+                        font-size: 20px;
+                        font-weight: 600;
+                    }
+                    .friends-items-school{
+                        font-size: 14px;
+                        font-weight: 600;
+                        color: @fontColorLight;
+                    }
+                }
+        
+            }
+        .friends-see-profil{
+            margin-top: 35px;
+            padding: 5px;
+            color: #ffffff;
+            background-color: #986ece;
+            border: 1px solid #986ece;
+            border-radius: 4px;
+            font-size: 12px;
+            float: right;
+            display: inline-block;
+            transition: .25s;
+            
+            &:hover {
+                background-color: @white;
+                color: @purple;
+                cursor: pointer;
+            }
+        }
+    }
+}

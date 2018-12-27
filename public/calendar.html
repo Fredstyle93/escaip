@@ -1,0 +1,581 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Fabrice Garrec</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <script src="../less.js" type="text/javascript"></script>
+<!--    <script src="js/front/calendar.js" type="text/javascript"></script>-->
+   
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    
+
+
+</head>
+
+<body>
+    <!-- --------------------------------- NAV BAR --------------------------------- -->
+
+    <div class="navbar">
+        <div class="l-container">
+            <div class="navbar-logo">
+                <img src="img/logo/logo.png" class="logo" alt="nomSite">
+            </div>
+
+            <div class="navbar-menu">
+                <div class="navbar-menu-log" id="click">
+                    <img src="img/users/user03.jpg" alt="" class="profil-img-navbar">
+                    <div class="navbar-arrow"></div>
+                </div>
+                <div class="subnav" >
+                    <nav class="subnav-nav">
+                        <ul class="subnav-list">
+                            <li class="subnav-list-items"><span></span>Aide</li>
+                            <li class="subnav-list-items"><span></span>Paramètre</li>
+                            <li class="subnav-list-items"><span></span>Nous contacter</li>
+                            <li class="subnav-list-items"><span></span>Se déconnecter</li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="burger-menu">
+                    <span class="burger-menu-bar"></span>
+                    <span class="burger-menu-bar"></span>
+                    <span class="burger-menu-bar"></span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- --------------------------------- TOGGLE NAVIGATION --------------------------------- -->
+    <div class="toggle-navigation">
+        <ul class="toggle-menu">
+            <li class="toggle-menu-items"><a href="" class="toggle-menu-items-link">S'inscrire</a></li>
+            <li class="toggle-menu-items"><a href="" class="toggle-menu-items-link">Se connecter</a></li>
+        </ul>
+
+        <div class="toggle-sidebar">
+            <nav class="toggle-sidebar-nav">
+                <ul class="toggle-sidebar-menu">
+                    <div class="toggle-sidebar-menu-section">
+                        <a href="index.html" class="toggle-sidebar-menu-link">
+                            <li class="toggle-sidebar-menu-items">
+                                <img src="../img/icones/home.svg" class="icon icon-home" alt=""> Accueil
+                            </li>
+                        </a>
+                        <a href="profil.html" class="toggle-sidebar-menu-link">
+                            <li class="toggle-sidebar-menu-items">
+                                <img src="../img/profil.jpg" class="icon icon-profil" alt=""> Mon profil
+                            </li>
+                        </a>
+                        <a href="category.html" class="toggle-sidebar-menu-link">
+                            <li class="toggle-sidebar-menu-items">
+                                <img src="../img/icones/fair-stand.svg" class="icon" alt=""> Catégories
+                            </li>
+                        </a>
+                    </div>
+
+                </ul>
+            </nav>
+
+
+        </div>
+
+    </div>
+        <div class="hide"></div>
+
+    <!-- --------------------------------- CONTENT --------------------------------- -->
+    <div class="container-fluid content">
+        <div class="l-container">
+            <!-- --------------------------------- ARIANE --------------------------------- -->
+            <div class="ariane row">
+                <ul class="ariane-list col-12 col-lg-9 offset-lg-3">
+                    <a href="../category.html" class="ariane-link"><span class="ariane-list-nomPage">Catégorie ></span></a>
+                    <span class="ariane-list-nomPage">Français</span>
+                </ul>
+            </div>
+            <div class="row">
+                <!-- --------------------------------- SIDEBAR --------------------------------- -->
+                <div class="sidebar col-lg-3">
+                    <nav class="sidebar-nav">
+                        <ul class="sidebar-menu">
+                            <div class="sidebar-menu-section">
+                                <a href="index_auth.html" class="sidebar-menu-link">
+                                    <li class="sidebar-menu-items">
+                                        <span class="sprite sprite-sidebar-home"></span> <span class="sidebar-menu-items-name">Accueil</span>
+                                    </li>
+                                </a>
+                                <a href="profil.html" class="sidebar-menu-link">
+                                    <li class="sidebar-menu-items locked">
+                                        <div class="bg-locked">
+                                            <img src="img/users/user03.jpg" alt="" class="profil-img-sidebar">
+                                        </div>
+                                        <span class="sidebar-menu-items-name">Mon profil</span>
+                                    </li>
+                                </a>
+                            </div>
+                            <div class="sidebar-menu-section">
+                                <a href="category.html" class="sidebar-menu-link">
+                                    <li class="sidebar-menu-items">
+                                        <span class="sprite sprite-sidebar-learning"></span> <span class="sidebar-menu-items-name">Apprentissage</span>
+                                    </li>
+                                </a>
+                                
+                                <a href="calendar.html" class="sidebar-menu-link">
+                                    <li class="sidebar-menu-items sidebar-menu-items-selected">
+                                        <span class="sprite sprite-sidebar-calendar"></span> <span class="sidebar-menu-items-name">Calendrier</span>
+                                    </li>
+                                </a>
+                                <a href="portfolio.html" class="sidebar-menu-link">
+                                    <li class="sidebar-menu-items">
+                                        <span class="sprite sprite-sidebar-portfolio"></span> <span class="sidebar-menu-items-name">Portfolios</span>
+                                    </li>
+                                </a>
+                            </div>
+                        </ul>
+                    </nav>
+
+
+                </div>
+                
+                
+                <!-- --------------------------------- ARTICLE --------------------------------- -->
+                <div class="col-12 col-lg-9 offset-lg-3">
+                    
+                    <div class="calendar content-container">
+                            <div class="calendar-header">
+                                <select class="calendar-title" style="border:none;font-size:20px;">
+                                    <option value="septembre">Septembre 2018</option>
+                                    <option value="octobre">Octobre 2018</option>
+                                    <option value="novembre">Novembre 2018</option>
+                                    <option value="decembre">Décembre 2018</option>
+                                </select>
+                            </div>
+                            <div class="calendar-content">
+                                <table class="calendar-table">
+                                    <tr>
+                                        <td class="calendar-td notSelected-event hasEvents">
+                                            <div class="calendar-day-header">
+                                                <div class="calendar-weekday">Lundi</div>
+                                                <div class="calendar-day"> 01 </div>
+                                            </div>
+                                            <div class="calendar-day-content">
+                                                <ul class="calendar-events">
+                                                    <li class="calendar-events-items calendar-events-event"><span class="sprite sprite-calendar-event"></span>Sortie avec des amis</li>
+                                                    <li class="calendar-events-items calendar-events-project"><span class="sprite sprite-calendar-project"></span>3D : Remise tp1</li>
+                                                    <li class="calendar-events-items calendar-events-learning"><span class="sprite sprite-calendar-learning"></span>Cours de 3D</li>
+                                                </ul>
+                                            </div>
+                                            <div class="calendar-day-footer">
+                                                <div class="calendar-day-footer-container">
+                                                    <ul class="calendar-events-icons">
+                                                        <span class="calendar-events-items-icons sprite sprite-calendar-event-small"></span>
+                                                        <span class="calendar-events-items-icons sprite sprite-calendar-project-small"></span>
+                                                        <span class="calendar-events-items-icons sprite sprite-calendar-learning-small"></span>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="calendar-td  notSelected-project hasEvents">
+                                            <div class="calendar-day-header">
+                                               <div class="calendar-weekday">Lundi</div>
+                                                <div class="calendar-day"> 01 </div>
+                                            </div>
+                                            <div class="calendar-day-content">
+                                                <ul class="calendar-events">
+                                                    <li class="calendar-events-items calendar-events-project"><span class="sprite sprite-calendar-project"></span>3D : Remise tp1</li>
+                                                </ul>
+                                            </div>
+                                            <div class="calendar-day-footer">
+                                                <div class="calendar-day-footer-container">
+                                                    <ul class="calendar-events-icons">
+                                                        <span class="calendar-events-items-icons sprite sprite-calendar-project-small"></span>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="calendar-td  notSelected-learning hasEvents">
+                                            <div class="calendar-day-header">
+                                               <div class="calendar-weekday">Lundi</div>
+                                                <div class="calendar-day"> 01 </div>
+                                            </div>
+                                            <div class="calendar-day-content">
+                                                <ul class="calendar-events">
+                                                    <li class="calendar-events-items calendar-events-learning"><span class="sprite sprite-calendar-learning"></span>Cours de vidéo</li>
+                                                    <li class="calendar-events-items calendar-events-event"><span class="sprite sprite-calendar-event"></span>Cours de vidéo</li>
+                                                </ul>
+                                            </div>
+                                            <div class="calendar-day-footer">
+                                                <div class="calendar-day-footer-container">
+                                                    <ul class="calendar-events-icons">
+                                                        <span class="calendar-events-items-icons sprite sprite-calendar-learning-small"></span>
+                                                        <span class="calendar-events-items-icons sprite sprite-calendar-event-small"></span>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="calendar-td">
+                                            <div class="calendar-day-header">
+                                                <div class="calendar-weekday">Lundi</div>
+                                                <div class="calendar-day"> 01 </div>
+                                            </div>
+                                            <div class="calendar-day-content">
+                                                <ul class="calendar-events">
+                                                </ul>
+                                            </div>
+                                            <div class="calendar-day-footer">
+                                                <div class="calendar-day-footer-container">
+                                                    <ul class="calendar-events-icons">
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="calendar-td">
+                                            <div class="calendar-day-header">
+                                                <div class="calendar-weekday">Lundi</div>
+                                                <div class="calendar-day"> 01 </div>
+                                            </div>
+                                            <div class="calendar-day-content">
+                                                <ul class="calendar-events">
+                                                </ul>
+                                            </div>
+                                            <div class="calendar-day-footer">
+                                                <div class="calendar-day-footer-container">
+                                                    <ul class="calendar-events-icons">
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="calendar-td">
+                                            <div class="calendar-day-header">
+                                                <div class="calendar-weekday">Lundi</div>
+                                                <div class="calendar-day"> 01 </div>
+                                            </div>
+                                            <div class="calendar-day-content">
+                                                <ul class="calendar-events">
+                                                </ul>
+                                            </div>
+                                            <div class="calendar-day-footer">
+                                                <div class="calendar-day-footer-container">
+                                                    <ul class="calendar-events-icons">
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="calendar-td">
+                                            <div class="calendar-day-header">
+                                                <div class="calendar-weekday">Lundi</div>
+                                                <div class="calendar-day"> 01 </div>
+                                            </div>
+                                            <div class="calendar-day-content">
+                                                <ul class="calendar-events">
+                                                </ul>
+                                            </div>
+                                            <div class="calendar-day-footer">
+                                                <div class="calendar-day-footer-container">
+                                                    <ul class="calendar-events-icons">
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="calendar-td notSelected">
+                                            <div class="calendar-day"> 01 </div>
+                                            <div class="calendar-events"></div>
+                                        </td>
+                                        <td class="calendar-td notSelected">
+                                            <div class="calendar-day"> 01 </div>
+                                            <div class="calendar-events"></div>
+                                        </td>
+                                        <td class="calendar-td  notSelected-project hasEvents">
+                                            <div class="calendar-day-header">
+                                                <div class="calendar-day"> 01 </div>
+                                            </div>
+                                            <div class="calendar-day-content">
+                                                <ul class="calendar-events">
+                                                    <li class="calendar-events-items calendar-events-project"><span class="sprite sprite-calendar-project"></span>3D : Remise tp1</li>
+                                                </ul>
+                                            </div>
+                                            <div class="calendar-day-footer">
+                                                <div class="calendar-day-footer-container">
+                                                    <ul class="calendar-events-icons">
+                                                        <span class="calendar-events-items-icons sprite sprite-calendar-project-small"></span>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="calendar-td notSelected">
+                                            <div class="calendar-day"> 01 </div>
+                                            <div class="calendar-events"></div>
+                                        </td>
+                                        <td class="calendar-td  notSelected-learning hasEvents">
+                                            <div class="calendar-day-header">
+                                                <div class="calendar-day"> 01 </div>
+                                            </div>
+                                            <div class="calendar-day-content">
+                                                <ul class="calendar-events">
+                                                    <li class="calendar-events-items calendar-events-learning"><span class="sprite sprite-calendar-learning"></span>Cours de vidéo</li>
+                                                </ul>
+                                            </div>
+                                            <div class="calendar-day-footer">
+                                                <div class="calendar-day-footer-container">
+                                                    <ul class="calendar-events-icons">
+                                                        <span class="calendar-events-items-icons sprite sprite-calendar-learning-small"></span>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="calendar-td notSelected">
+                                            <div class="calendar-day"> 01 </div>
+                                            <div class="calendar-events"></div>
+                                        </td>
+                                        <td class="calendar-td notSelected">
+                                            <div class="calendar-day"> 01 </div>
+                                            <div class="calendar-events"></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="calendar-td notSelected">
+                                            <div class="calendar-day"> 01 </div>
+                                            <div class="calendar-events"></div>
+                                        </td>
+                                        <td class="calendar-td notSelected">
+                                            <div class="calendar-day"> 01 </div>
+                                            <div class="calendar-events"></div>
+                                        </td>
+                                        <td class="calendar-td notSelected">
+                                            <div class="calendar-day"> 01 </div>
+                                            <div class="calendar-events"></div>
+                                        </td>
+                                        <td class="calendar-td  notSelected-event hasEvents">
+                                            <div class="calendar-day-header">
+                                                <div class="calendar-day"> 01 </div>
+                                            </div>
+                                            <div class="calendar-day-content">
+                                                <ul class="calendar-events">
+                                                    <li class="calendar-events-items calendar-events-event"><span class="sprite sprite-calendar-event"></span>Sortie avec des amis</li>
+                                                </ul>
+                                            </div>
+                                            <div class="calendar-day-footer">
+                                                <div class="calendar-day-footer-container">
+                                                    <ul class="calendar-events-icons">
+                                                        <span class="calendar-events-items-icons sprite sprite-calendar-event-small"></span>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </td><td class="calendar-td  notSelected-event hasEvents">
+                                            <div class="calendar-day-header">
+                                                <div class="calendar-day"> 01 </div>
+                                            </div>
+                                            <div class="calendar-day-content">
+                                                <ul class="calendar-events">
+                                                    <li class="calendar-events-items calendar-events-event"><span class="sprite sprite-calendar-event"></span>Sortie avec des amis</li>
+                                                </ul>
+                                            </div>
+                                            <div class="calendar-day-footer">
+                                                <div class="calendar-day-footer-container">
+                                                    <ul class="calendar-events-icons">
+                                                        <span class="calendar-events-items-icons sprite sprite-calendar-event-small"></span>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="calendar-td notSelected">
+                                            <div class="calendar-day"> 01 </div>
+                                            <div class="calendar-events"></div>
+                                        </td>
+                                        <td class="calendar-td notSelected">
+                                            <div class="calendar-day"> 01 </div>
+                                            <div class="calendar-events"></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="calendar-td notSelected">
+                                            <div class="calendar-day"> 01 </div>
+                                            <div class="calendar-events"></div>
+                                        </td>
+                                        <td class="calendar-td notSelected">
+                                            <div class="calendar-day"> 01 </div>
+                                            <div class="calendar-events"></div>
+                                        </td>
+                                        <td class="calendar-td notSelected">
+                                            <div class="calendar-day"> 01 </div>
+                                            <div class="calendar-events"></div>
+                                        </td>
+                                        <td class="calendar-td notSelected">
+                                            <div class="calendar-day"> 01 </div>
+                                            <div class="calendar-events"></div>
+                                        </td>
+                                        <td class="calendar-td notSelected">
+                                            <div class="calendar-day"> 01 </div>
+                                            <div class="calendar-events"></div>
+                                        </td>
+                                        <td class="calendar-td notSelected">
+                                            <div class="calendar-day"> 01 </div>
+                                            <div class="calendar-events"></div>
+                                        </td>
+                                        <td class="calendar-td notSelected">
+                                            <div class="calendar-day"> 01 </div>
+                                            <div class="calendar-events"></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="calendar-td notSelected">
+                                            <div class="calendar-day"> 01 </div>
+                                            <div class="calendar-events"></div>
+                                        </td>
+                                        <td class="calendar-td notSelected">
+                                            <div class="calendar-day"> 01 </div>
+                                            <div class="calendar-events"></div>
+                                        </td>
+                                        <td class="calendar-td notSelected">
+                                            <div class="calendar-day"> 01 </div>
+                                            <div class="calendar-events"></div>
+                                        </td>
+                                        <td class="calendar-td notSelected">
+                                            <div class="calendar-day"> 01 </div>
+                                            <div class="calendar-events"></div>
+                                        </td>
+                                        <td class="calendar-td notSelected">
+                                            <div class="calendar-day"> 01 </div>
+                                            <div class="calendar-events"></div>
+                                        </td>
+                                        <td class="calendar-td notSelected">
+                                            <div class="calendar-day"> 01 </div>
+                                            <div class="calendar-events"></div>
+                                        </td>
+                                        <td class="calendar-td notSelected">
+                                            <div class="calendar-day"> 01 </div>
+                                            <div class="calendar-events"></div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="calendar-control">
+                                <div class="control-container">
+                                    <ul class="row control-buttons-list">
+                                        <li class="col-3 buttons-list-element"><strong>Ajouter</strong></li>
+                                        <li class="col-3 buttons-list-element add-learning-button"><span class="sprite sprite-calendar-learning-medium"></span> un cours</li>
+                                        <li class="col-3 buttons-list-element add-project-button"><span class="sprite sprite-calendar-project-medium"></span> un projet</li>
+                                        <li class="col-3 buttons-list-element add-event-button"><span class="sprite sprite-calendar-event-medium"></span> un évènement</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="calendar-panel">
+                                <div class="calendar-panel-container row">
+                                    <div class="panel-menu-container col-12 col-md-3">
+                                        <nav class="panel-menu ">
+                                         
+                                           <div class="arrow small-arrow calendar-arrow-left">
+                                               <div class="left-arrow"></div>
+                                           </div>
+                                           <strong>17 septembre 2018</strong>
+                                           <div class="arrow small-arrow calendar-arrow-right">
+                                               <div class="right-arrow"></div>
+                                           </div>
+                                           
+                                            <ul class="panel-menu-list">
+                                                <li class="panel-menu-list-items"><span></span>évènement divers</li>
+                                                <li class="panel-menu-list-items"><span></span>évènement divers</li>
+                                                <li class="panel-menu-list-items"><span></span>évènement divers</li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                    <div class="panel-infos-container col-12 col-md-9">
+                                        <div class="row" style="margin-top: 5px;">
+                                            <div class="panel-icon-container offset-1">
+                                                <span class="panel-large-icon sprite sprite-calendar-event-large"></span>
+                                            </div>
+                                            <div class="panel-infos col-8 offset-1">
+                                                <div class="panel-infos-header">
+                                                    <h4 class="event-title">Évènement divers <span>- 8h00</span></h4>
+                                                    <p class="event-time"><span class="sprite-time">2j</span></p>
+                                                </div>
+                                                <div class="panel-infos-content">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere ipsam, facilis officia dolorem non iste earum, suscipit, laboriosam quod totam saepe. Pariatur impedit voluptatibus assumenda, reiciendis aliquam temporibus in repellat.</p>
+<!--
+                                                    <button class="modify">Modifier</button>
+                                                    <button class="delete">Supprimer</button>
+-->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-container">
+            <img src="../img/logo/logo.png" alt="Escaip" class="footer-logo">
+        </div>
+    </footer>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/front/calendar.js"></script>
+    <script type="text/javascript" src="js/front/burgerMenu.js"></script>
+    
+    <script type="text/javascript">
+        $(function(){
+            $("#click").click(function(){
+                $(this).toggleClass("nabar-menu-is-active");
+                $(".subnav").toggleClass("subnav-is-active");
+            }); 
+//            $(".navbar-menu-log").click(function() {
+//                $(this).css("background-color", "yellow");
+//            })
+        })
+    </script>
+</body>
+<script>
+    var $buoop = {
+        notify: {
+            i: -5,
+            f: -4,
+            o: -4,
+            s: -2,
+            c: -4
+        },
+        insecure: true,
+        api: 5
+    };
+
+    function $buo_f() {
+        var e = document.createElement("script");
+        e.src = "//browser-update.org/update.min.js";
+        document.body.appendChild(e);
+    };
+    try {
+        document.addEventListener("DOMContentLoaded", $buo_f, false)
+    } catch (e) {
+        window.attachEvent("onload", $buo_f)
+    }
+
+    $(function() {
+        $(".calendar-td").click(
+        function(){
+            $(".calendar-td").removeClass(".calendar-td");
+            }
+        )
+    })
+    
+</script>
+
+</html>

@@ -1,0 +1,41 @@
+@import '../../variables/_variables';
+.post-feed {
+    padding: 10px 30px;
+    .post-feed-header {
+        padding-bottom: 5px;
+        margin-bottom: 20px;
+        border-bottom: @border;
+        
+        .post-user {
+            display: inline-block;
+            
+            .post-information-name {
+                margin-left: 5px;
+                display: inline-block;
+                font-size: .8em;
+                font-weight: 700;
+                vertical-align: middle;
+            }
+        }
+        .post-date {
+            margin-top: 11px;
+            float: right;
+            vertical-align: middle;
+
+            p{
+                font-size: 13px;
+            }
+        }
+    }
+    .post-feed-content{
+        .post-title{
+            margin-bottom: 10px;
+            color: @purple;
+        }
+        p{
+            font-size: 14px;
+            line-height: 24px;
+            word-wrap: break-word;
+        }
+    }
+}

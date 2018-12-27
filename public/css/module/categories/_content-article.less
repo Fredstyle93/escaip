@@ -1,0 +1,90 @@
+@import '../../variables/_variables';
+
+
+.content{
+    width: 100%;
+    min-height: @sidebarHeight;
+//    overflow: hidden;
+    margin: calc(@navbarHeight - 20px) 0 40px 0;
+    transition: .5s;
+    .content-container{
+            margin: 0 auto;
+            margin-bottom: 39px;
+            //padding: 19px 13px;
+            max-width: 892px;
+            border-radius: 10px;
+            // box-shadow: @boxShadow;
+            border: @border;
+//            min-width: 320px;
+            //text-align: center;
+        @media(max-width:@mobileCorrection){
+//            text-align: center;
+        }
+        
+    
+        .content-grid{           
+            padding-top: 20px;
+            transition: .5s;
+            
+            .article-link{
+                .article-title{
+                    color: @fontColorDark;
+                    font-weight: bold;
+                    font-size: 13px;
+                    margin-left: 25px;
+                    width: 140px;
+                    margin: 0 auto;
+                    // font-size: 13px;
+                    // font-weight: 600;
+                    // color: @white;
+
+                }
+            
+                .article-image{
+                    margin: 0 auto;
+                    // background-image: url(../../img/330px-Homework_-_vector_maths.jpg);
+                    background-size: cover;
+                    width: 140px;
+                    height: 70px;
+                    border-radius: 3px;
+                    margin-bottom: 5px;
+
+                    .article-bg-title{
+                        position: relative;
+                        top: 37px;
+                        padding: 10px;
+                        border-radius: 0 0 @borderRadius @borderRadius;
+                        background: linear-gradient(to top, rgba(0,0,0,.9), rgba(0,0,0,0)); 
+                    }
+
+                }
+                
+                &:hover{
+                    .article-title{
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+        .content-category-title{
+            border-bottom: @border;
+            .category-link-title{
+                display: inline-block;
+                width: 30%;
+                
+            }
+        }
+    }
+}
+
+//.slick-prev:after {
+//  content: ">";
+//  color: red;
+//  font-size: 30px;
+//}
+//
+//.slick-next:before {
+//  content: "<";
+//  color: red;
+//  font-size: 30px;
+//}

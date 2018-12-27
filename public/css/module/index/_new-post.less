@@ -1,0 +1,81 @@
+@import '../../variables/_variables';
+
+@media(max-width:@pad){
+    .new-post{
+        padding: 10px;
+        .new-post-information{
+            display: inline-block;
+            .new-post-title{
+                display: none;
+            }
+        }
+        .new-post-type{
+//            margin-top: 5px;
+            display: inline-block;
+            float: right;
+            span{
+                margin: 5px;
+            }
+        }
+        
+    }
+}
+
+
+@media(min-width:@pad){
+    .new-post{
+    padding: 10px 30px;
+    .new-post-information{
+        display: inline-block;
+        .new-post-title{
+            margin-left: 15px;
+            display: inline-block;
+            letter-spacing: -1px;
+            font-weight: 600;
+            vertical-align: middle;
+        }
+    }
+    .new-post-type{
+//        margin-top: 10px;
+        float: right;
+        display: inline-block;
+        
+        span{
+            margin-left: 70px;
+            margin-top: 7px;
+        }
+        
+        .hover-learning-button{
+//            width: 100px;
+            padding: 10px;
+            position: fixed;
+            border: 1px solid @purple;
+            border-radius: 4px;
+            background-color: @white;
+            top: 165px;
+            right: 634px;
+            display: none;
+//            opacity: 0;
+            
+            .arrow-learning-button-title{
+                width: 8px;
+                height: 8px;
+                transform: rotate(45deg);
+                position: absolute;
+                background-color: #ffffff;
+                border-top: 1px solid @purple;
+                border-left: 1px solid @purple;
+                top: -3px;
+                right: 29px;
+                
+            }
+            .learning-button-title{
+                color: @purple;
+                font-size: .7rem;
+                font-weight: 500;
+            }
+        }
+    }
+}
+}
+

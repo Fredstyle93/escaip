@@ -1,0 +1,108 @@
+
+.selected-day{
+    position: fixed;
+    width: 185px !important;
+//    height: 175px !important;
+    padding: 0 !important;
+    z-index: 5;
+    box-shadow: @boxShadowOrange;
+    background-color: white;
+    margin-left: -32px;
+    margin-top: -42px;
+    .calendar-day-header{
+        border-bottom: @borderOrange;
+        padding: 10px;
+        margin-bottom: 5px;
+        .calendar-weekday{
+            color: @orange;
+        }
+        .calendar-day{
+            font-weight: bold;
+            color: @orange !important;
+            font-size: .8rem;
+        }
+    }
+    .calendar-day-content{
+        display: block !important;
+        padding: 10px;
+        
+        .calendar-events-items{
+            margin-bottom: 10px;
+            font-size: 12px;
+        }
+        .calendar-events-project{
+            color: @orange;
+        }
+        .calendar-events-learning{
+            color: @purple;
+        }
+        .calendar-events-event{
+            color: @green;
+        }
+        
+    }
+    .calendar-day-footer{
+//        background-color: rgba(166, 147, 204, .4);
+        .calendar-day-footer-container{
+            padding: 10px
+        }
+    }
+    &:hover{
+//        background-color: red;
+    }
+}
+.selected-day-learning{
+    box-shadow: @boxShadowPurple;
+    
+    .calendar-day-header{
+        border-bottom: @borderPurple;
+        
+        .calendar-weekday{
+            color: @purple;
+        }
+        .calendar-day{
+            color: @purple !important;
+        }
+    }
+    .calendar-day-footer{
+        background-color: @purplePale;
+    }
+    
+}
+.selected-day-event{
+    box-shadow: @boxShadowGreen;
+    
+    .calendar-day-header{
+        border-bottom: @borderGreen;
+        
+        .calendar-weekday{
+            color: @green;
+        }
+        .calendar-day{
+            color: @green !important;
+        }
+    }
+    
+    .calendar-day-footer{
+        background-color: @greenPale;
+    }
+
+}
+.selected-day-project{
+    box-shadow: @boxShadowOrange;
+    
+    .calendar-day-header{
+        border-bottom: @borderOrange;
+        
+        .calendar-weekday{
+            color: @orange;
+        }
+        .calendar-day{
+            color: @orange !important;
+        }
+    }
+    
+    .calendar-day-footer{
+        background-color: @orangePale;
+    }
+}

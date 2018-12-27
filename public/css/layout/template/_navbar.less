@@ -1,0 +1,109 @@
+@import "../../variables/_variables";
+.subnav-is-active{
+    display: inline-block !important;
+    position: fixed;
+//    padding: 10px;
+    width: 132px;
+    background-color: white;
+    border: @borderDark;
+    border-radius: 6px;
+    top: 52px;
+    margin-left: -77px;
+    
+    
+    ;
+}
+.nabar-menu-is-active{
+    background-color: @greyPale;
+    border-radius: 6px;
+    border: @borderDark !important;
+}
+.navbar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0; 
+    z-index: 99999999;    
+    width: 100%;
+    height: @navbarHeight;
+//    padding-left: 0;
+    box-shadow: @boxShadow;
+    background-color: @white;
+    transition: .5s;
+    
+    .navbar-menu{
+        float: right;
+        //display: inline-block;
+        color: @purple;
+        
+        .navbar-menu-items{
+            padding: 2px 10px;
+            font-weight: 600;
+            
+            &:first-child{
+                border-right: @border;
+                color: @purple;
+            }
+            
+            &:last-child{ padding-right: 0;}
+            
+        }
+        .navbar-menu-guest{
+            margin-top: 7px;
+        }
+        .navbar-menu-log{
+            padding: 4px;
+            border: 1px solid @white;
+            cursor: pointer;
+            
+            &:hover{
+                background-color: @greyPale;
+                border-radius: 6px;
+                border: @borderDark;
+            }
+            @media(max-width:@desktop){
+                display: none;
+            }
+            
+            .navbar-arrow{
+                width: 0; 
+                height: 0; 
+                display: inline-block;
+                border-left: 5px solid transparent;
+                border-right: 5px solid transparent;
+                border-top: 5px solid @purple;
+                
+            }
+        }
+        .subnav{
+            display: none;
+            .subnav-nav{
+                .subnav-list-items{
+                    padding: 10px;
+                    border-bottom: @border;
+                    font-size: .8rem;
+                    
+                    &:last-child{
+                        border: none;
+                    }
+                }
+            }
+        }
+        
+        
+    }
+    
+    .navbar-logo{
+        float: left;
+        width: 200px;
+        margin-top: 5px;
+        //padding-left: 18px;
+        .logo{
+            width: 100px;
+            display: inherit;
+//            margin: 0 auto;
+        }
+
+    }
+    
+}

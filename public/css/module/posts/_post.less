@@ -1,0 +1,88 @@
+@import 'variables/_variables';
+
+.post{
+    padding-bottom: 16px;
+    .post-header{
+        margin-bottom: 20px;
+        border-bottom: @borderPurple;
+        .post-profil-container{
+            padding: 10px 30px;
+    
+            @media(max-width:@mobile){
+                    padding: 10px 15px;
+            }
+            .post-information{
+                display: inline-block;
+                
+                .profil-image {
+                    display: inline-block;
+                    max-width: 50px;
+                    border-radius: 100%;
+//                    position: absolute;
+//                    top: 90px;
+//                @media(max-width:@mobile) {
+//                    width: 90px;
+//                }
+                }
+                .post-username{
+                    display: inline-block;
+                }
+                .post-school{
+                    display: inline-block;
+                    margin-left: 15px;
+                    
+                    span{
+                        display: inline-block;
+                    }
+                    p{
+                        display: inline-block;
+                        font-size: 12px;
+                    }
+                    
+                    @media(max-width:470px){
+                        display: none;
+                    }
+                }
+            }
+            .post-btn{
+                margin-top: 10px;
+            }
+        }
+    }
+    .post-content{
+        padding: 10px 30px;
+    
+        @media(max-width:@mobile){
+                padding: 10px 15px;
+        }
+        .post-title{
+            margin-bottom: 20px;
+            span{
+                color: @purple;
+                font-weight: 700;
+            }
+        }
+        .post-description{
+            margin-bottom: 20px;
+            line-height: 22px;
+        }
+        .response-post-form{
+            label, input, textarea{
+                width: 100%;
+                
+            }
+            label{
+                margin-bottom: 5px;
+                color: @purple;
+            }
+            input{
+                margin-bottom: 15px;
+                border: @border;
+            }
+            textarea{
+                border-radius: 5px;
+                border: @border;
+            }
+        }
+    }
+}

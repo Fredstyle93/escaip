@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Fabrice Garrec</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <!--    <script src="less.js" type="text/javascript"></script>-->
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(".burger-menu").click(function() {
+                $(".burger-menu").toggleClass("is-active")
+            })
+            $(".burger-menu").click(function() {
+                    $(".toggle-navigation").toggleClass("is-active")
+                })
+                //            $(".burger-menu").click(function() {
+                //                $(".navbar").toggleClass("is-active")
+                //            })
+            $(".burger-menu").click(function() {
+                $(".hide").toggleClass("is-active")
+            })
+            $(".hide").click(function() {
+                    $(".hide").removeClass("is-active")
+                })
+                //            $(".hide").click(function() {
+                //                $("..navbar").removeClass("is-active")
+                //            })
+            $(".hide").click(function() {
+                $(".burger-menu").removeClass("is-active")
+            })
+            $(".hide").click(function() {
+                $(".toggle-navigation").removeClass("is-active")
+            })
+        })
+        $(function() {
+            $("#navbar").load("navbar.html");
+        });
+
+    </script>
+
+
+</head>
+
+<body>
+    <!-- --------------------------------- NAV BAR --------------------------------- -->
+
+    <div class="navbar">
+        <div class="l-container">
+            <div class="navbar-logo">
+                <img src="img/logo/logo.png" class="logo" alt="nomSite">
+            </div>
+
+            <div class="navbar-menu">
+                <div class="navbar-menu-log" id="click">
+                    <img src="img/profil.jpg" alt="" class="profil-img-navbar">
+                    <div class="navbar-arrow"></div>
+                </div>
+                <div class="subnav">
+                    <nav class="subnav-nav">
+                        <ul class="subnav-list">
+                            <li class="subnav-list-items"><span></span>Aide</li>
+                            <li class="subnav-list-items"><span></span>Paramètre</li>
+                            <li class="subnav-list-items"><span></span>Nous contacter</li>
+                            <li class="subnav-list-items"><span></span>Se déconnecter</li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="burger-menu">
+                    <span class="burger-menu-bar"></span>
+                    <span class="burger-menu-bar"></span>
+                    <span class="burger-menu-bar"></span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- --------------------------------- TOGGLE NAVIGATION --------------------------------- -->
+    <div class="toggle-navigation">
+        <ul class="toggle-menu">
+            <li class="toggle-menu-items"><a href="" class="toggle-menu-items-link">S'inscrire</a></li>
+            <li class="toggle-menu-items"><a href="" class="toggle-menu-items-link">Se connecter</a></li>
+        </ul>
+
+        <div class="toggle-sidebar">
+            <nav class="toggle-sidebar-nav">
+                <ul class="toggle-sidebar-menu">
+                    <div class="toggle-sidebar-menu-section">
+                        <a href="index.html" class="toggle-sidebar-menu-link">
+                            <li class="toggle-sidebar-menu-items">
+                                <img src="img/icones/home.svg" class="icon icon-home" alt=""> Accueil
+                            </li>
+                        </a>
+                        <a href="#" class="toggle-sidebar-menu-link">
+                            <li class="toggle-sidebar-menu-items">
+                                <img src="img/profil.jpg" class="icon icon-profil" alt=""> Mon profil
+                            </li>
+                        </a>
+                        <a href="categorie.html" class="toggle-sidebar-menu-link">
+                            <li class="toggle-sidebar-menu-items">
+                                <img src="img/icones/fair-stand.svg" class="icon" alt=""> Catégories
+                            </li>
+                        </a>
+                    </div>
+
+                </ul>
+            </nav>
+
+
+        </div>
+
+        <div class="hide"></div>
+
+    </div>
+
+    <!-- --------------------------------- CONTENT --------------------------------- -->
+    <div class="content">
+        <div class="l-container">
+            <!-- --------------------------------- ARIANE --------------------------------- -->
+            <div class="ariane row">
+                <ul class="ariane-list col-12 col-lg-9 offset-lg-3">
+                    <span class="ariane-list-nomPage">Profil</span>
+                </ul>
+            </div>
+            <div class="row ">
+                <!-- --------------------------------- SIDEBAR --------------------------------- -->
+                <div class="sidebar col-lg-3 ">
+                    <nav class="sidebar-nav">
+                        <ul class="sidebar-menu">
+                            <div class="sidebar-menu-section">
+                                <a href="index.html" class="sidebar-menu-link">
+                                    <li class="sidebar-menu-items">
+                                        <span class="sprite sprite-sidebar-home"></span> <span class="sidebar-menu-items-name">Accueil</span>
+                                    </li>
+                                </a>
+                                <a href="profil.html" class="sidebar-menu-link">
+                                    <li class="sidebar-menu-items locked">
+                                        <div class="bg-locked">
+                                            <img src="img/profil.jpg" alt="" class="profil-img-sidebar">
+                                        </div>
+                                        <span class="sidebar-menu-items-name">Mon profil</span>
+                                    </li>
+                                </a>
+                            </div>
+                            <div class="sidebar-menu-section">
+                                <a href="category.html" class="sidebar-menu-link">
+                                    <li class="sidebar-menu-items">
+                                        <span class="sprite sprite-sidebar-learning"></span> <span class="sidebar-menu-items-name">Cours</span>
+                                    </li>
+                                </a>
+
+                                <a href="calendar.html" class="sidebar-menu-link">
+                                    <li class="sidebar-menu-items">
+                                        <span class="sprite sprite-sidebar-calendar"></span> <span class="sidebar-menu-items-name">Calendrier</span>
+                                    </li>
+                                </a>
+                                <a href="portfolio.html" class="sidebar-menu-link">
+                                    <li class="sidebar-menu-items sidebar-menu-items-selected">
+                                        <span class="sprite sprite-sidebar-portfolio"></span> <span class="sidebar-menu-items-name">Portfolios</span>
+                                    </li>
+                                </a>
+                            </div>
+                        </ul>
+                    </nav>
+
+                    <footer class="sidebar-footer">
+                        <ul class="sidebar-infos">
+                            <li class="sidebar-infos-items">
+                                <img src="img/icones/1x/Fichier%202.png" alt="Suivez-nous sur Facebook" class="icon sidebar-footer-icones">
+                                <p class="info-content">Suivez-nous sur Facebook !</p>
+                            </li>
+                            <li class="sidebar-infos-items">
+                                <img src="img/icones/1x/Fichier%203.png" alt="" class="icon sidebar-footer-icones">
+                                <p class="info-content">Boîte à commentaires !</p>
+                            </li>
+                        </ul>
+
+                        <p class="copyrights">&copy; Tous les droits</p>
+                    </footer>
+
+
+                </div>
+                <!-- --------------------------------- PORTFOLIO ------------------------------- -->
+                <div class="col-12 col-lg-9 offset-lg-3">
+                    <div class="content-container project">
+                    <div class="row project-header">
+                        <div class="project-image-container col-12  col-md-4">    
+                            <img src="img/videogames.jpg" class="project-image" alt="">
+                        </div>
+                        <div class="project-infos col-12  col-md-8">
+                            <div class="project-primary-infos">
+                                <h2 class="project-title">Coco Lolo</h2>
+                                <p class="published-time"> - Il y une semaine</p>
+                                <p class="project-nbViews">20 vues</p>
+<!--                                <button class="profil-contact-btn project-btn" style="display:inline-block;"> <span class="sprite sprite-profil-message"></span> <span class="button-name" style="display:none;">Contacter</span></button>-->
+                            </div>
+                            <div class="project-secondary-infos">
+                                <strong class="project-techo">Technologie(s) utilisée(s)</strong>
+                                <strong class="project-categorie">Catégorie : Multimédia</strong>
+                                <ul class="project-techno-list">
+                                    <li class="project-techno-list-items">Unity2D</li>
+                                    <li class="project-techno-list-items">Photoshop CC2018</li>
+                                    <li class="project-techno-list-items">Visual StudioCode</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <p class="project-description">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est numquam expedita voluptatibus praesentium impedit vero iusto provident, animi temporibus amet? Rerum inventore maiores cumque, hic a eius aspernatur ab impedit. </br></br>
+                            Sit amet, consectetur adipisicing elit. Perferendis molestiae voluptates rerum. Eligendi quo dolore atque illo veniam at, sint quisquam aperiam quod, cum voluptas. Labore accusamus magnam esse at. </br></br> Nemo aliquam, omnis. Odit aspernatur ullam dolore quibusdam amet aperiam autem alias doloribus incidunt excepturi adipisci, itaque rem obcaecati necessitatibus maiores odio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                            Sit amet, consectetur adipisicing elit. Perferendis molestiae voluptates rerum. Eligendi quo dolore atque illo veniam at, sint quisquam aperiam quod, cum voluptas. Labore accusamus magnam esse at. </br></br> Nemo aliquam, omnis. Odit aspernatur ullam dolore quibusdam amet aperiam autem alias doloribus incidunt excepturi adipisci, itaque rem obcaecati necessitatibus maiores odio. Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                        </p>
+                    </div>
+                    <div class="project-gallery row">
+                        <div class="col-4">
+                            <img src="img/videogames.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img src="img/videogames.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img src="img/videogames.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img src="img/videogames.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img src="img/videogames.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img src="img/videogames.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img src="img/videogames.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img src="img/videogames.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img src="img/videogames.jpg" alt="">
+                        </div>
+                        
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- --------------------------------- FOOTER --------------------------------- -->
+    <footer class="footer">
+        <div class="footer-container">
+            <img src="img/logo/logo.png" alt="Escaip" class="footer-logo">
+        </div>
+    </footer>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+<script>
+    var $buoop = {
+        notify: {
+            i: -5,
+            f: -4,
+            o: -4,
+            s: -2,
+            c: -4
+        },
+        insecure: true,
+        api: 5
+    };
+
+    function $buo_f() {
+        var e = document.createElement("script");
+        e.src = "//browser-update.org/update.min.js";
+        document.body.appendChild(e);
+    };
+    try {
+        document.addEventListener("DOMContentLoaded", $buo_f, false)
+    } catch (e) {
+        window.attachEvent("onload", $buo_f)
+    }
+
+</script>
+
+</html>

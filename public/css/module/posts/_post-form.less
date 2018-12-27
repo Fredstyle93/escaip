@@ -1,0 +1,61 @@
+@import '../../variables/_variables';
+
+@media(max-width:@pad){
+    .arrow-indicator{
+        display: none;
+    }
+}
+
+.post-form{
+    padding: 20px 30px;
+    position:relative;
+    top: -25px;
+    z-index: 3;
+    background-color: @white;
+    transition: .5s;
+    
+    .arrow-indicator{
+        width: 30px;
+        height: 30px;
+        transform: rotate(45deg);
+        position: absolute;
+        background-color: #ffffff;
+        border-top: @borderActive;
+        border-left: @borderActive;
+        top: -14px;
+    }    
+    .post-form-header{
+        padding-bottom: 15px;
+        border-bottom: @border;
+    }
+}
+
+.post-form-learning{
+    display: none;
+    color: @purple;
+    
+    .post-form-learning-title{
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+    
+}
+
+.post-form-event{
+    display: none;
+    color: @green;
+    
+    .post-form-event-title{
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+}
+
+.post-form-project{
+    display: none;
+    color: @orange;
+    .post-form-project-title{
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+}
