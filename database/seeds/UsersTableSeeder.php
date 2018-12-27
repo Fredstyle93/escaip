@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\User;
+use  Illuminate\Support\Facades\DB;
 
 class UsersTableSeeder extends Seeder
 {
@@ -31,5 +32,22 @@ class UsersTableSeeder extends Seeder
       $userFab->level = 1;
       $userFab->description = "Admin";
       $userFab->save();
+
+
+      for($i = 0 ; $i < 10 ; $i++){
+        \Illuminate\Support\Facades\DB::table('users')->insert([
+            'firstName'=> "John$i",
+            'lastName'=> "doe",
+            'userName'=> "john $i doe",
+            'email'=> "John$i@Doe.com",
+            'password'=> bcrypt('0000'),
+            'level'=> 0,
+            'description'=> "test $i",
+            'email'=> "John$i@Doe.com",
+            'email'=> "John$i@Doe.com",
+            
+
+        ]);
+    }
     }
 }
