@@ -14,7 +14,7 @@
 
 Auth::routes();
 
-Route::get('/', 'WelcomeController@index')->name('index');
+Route::get('/', 'WelcomeController@index')->name('welcome');
 Route::get('/users', 'UserController@index');
 
 
@@ -22,6 +22,6 @@ Route::get('/users', 'UserController@index');
 Route::group(['middleware'=>'auth'],function(){
     Route::get('/users/{user}', 'UserController@show')->name('user.show');
     Route::get('/users/{user}/edit', 'UserController@edit')->name('user.edit');
-Route::put('/users/{user}/update', 'UserController@update')->name('user.update');
+    Route::put('/users/{user}/update', 'UserController@update')->name('user.update');
     Route::get('/home', 'HomeController@index')->name('home');
 });
