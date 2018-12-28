@@ -16,12 +16,14 @@ Auth::routes();
 
 Route::get('/', 'WelcomeController@index')->name('welcome');
 Route::get('/users', 'UserController@index');
+Route::get('/portfolios', 'UserController@index')->name('portfolios');
 
+Route::get('/users/{user}', 'UserController@show')->name('user.show');
 
 
 Route::group(['middleware'=>'auth'],function(){
-    Route::get('/users/{user}', 'UserController@show')->name('user.show');
-    Route::get('/users/{user}/edit', 'UserController@edit')->name('user.edit');
-    Route::put('/users/{user}/update', 'UserController@update')->name('user.update');
+    Route::get('/profil', 'UserController@show')->name('profil');
+    Route::get('/profil/edit', 'UserController@edit')->name('user.edit');
+    Route::put('/profil/update', 'UserController@update')->name('user.update');
     Route::get('/home', 'HomeController@index')->name('home');
 });
