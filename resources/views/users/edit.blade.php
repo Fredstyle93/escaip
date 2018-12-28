@@ -1,8 +1,9 @@
-@extends('template.content')
+@extends('layouts.app')
 @section('content')
 
 
-    {!! Form::model($user, ['method'=>'put', 'files' => true]) !!}
+
+    {!! Form::model($user, ['method'=>'put', 'files' => true, 'route' =>['user.update', $user->id]]) !!}
 
         <div class="content-container profil">
             <div class="profil-header">
@@ -12,52 +13,57 @@
 
                 <div class="profil-container">
                     <div class="profil-container-image">
-                        <img src="{{asset('img/avatars/' . $user->avatar)}}" alt="{{$user->name}}" class="profil-image">
+                        <img src="{{asset('img/avatars/' . $user->avatar)}}.jpg" alt="{{$user->name}}" class="profil-image">
                     </div>
                     <div class="profil-infos ">
                         
-                        {!! Form::file('avatar') !!}
+                        <i class="fas fa-cog">
+                        {!! Form::file('avatar',["class"=>"hidden"]) !!}
+                         </i>
+                        {!! Form::text('firstName', $user->firstName) !!}
+                        {!! Form::text('lastName', $user->lastName) !!}
                         
-                        {!! Form::text('first_name', $user->first_name) !!}
-                        {!! Form::text('last_name', $user->last_name) !!}
-                        
-                        {{--  <h2 class="profil-name">{{$user->first_name." ".$user->last_name}}</h2>  --}}
+                         <h2 class="profil-name">{{$user->firstName." ".$user->lastName}}</h2> 
 
                     </div>
-                    {{--  <button class="profil-contact-btn"> <span class="sprite sprite-profil-message"></span> Contacter</button>  --}}
+                     {{-- <button class="profil-contact-btn"> <span class="sprite sprite-profil-message"></span> Contacter</button>  --}}
                 </div>
             </div>
 
             <div class="profil-details row">
                 <ul class="profil-details-list col-6 col-lg-6">
                     <li class="details-elements">
-                        <h4>{!! Form::label('school_id', 'Cégep') !!}</h4>                 
-                        {!! Form::select('school_id', $schools, $user->school_id) !!}
+                       <h4>{!! Form::label('school_id', 'Cégep') !!}</h4>                 
+                       {{--   {!! Form::select('school_id', $schools, $user->school_id) !!} --}}
                     </li>
                     <li class="details-elements"> 
                         <h4>Compétences </h4>
-                        {!! Form::select('skills[]', App\Skill::pluck('name', 'id'), $user->skills->pluck('id'), ['multiple' => 'true', 'id' => '#demo']) !!}
+                        {{-- {!! Form::select('skills[]', App\Skill::pluck('name', 'id'), $user->skills->pluck('id'), ['multiple' => 'true', 'id' => '#demo']) !!} --}}
                     </li>
                 </ul>
                 <ul class="profil-stats-list col-6 col-lg-6">
                     <li class="stats-elements">
-                        <div class="stats-number"><p>{{$user->posts->count()}}</p></div> <p class="stats-name">publications</p>
+                        <div class="stats-number"><p>{{$user->posts}}</p></div> <p class="stats-name">publications</p>
                     </li>
                     <li class="stats-elements">
-                        <div class="stats-number"><p>12x</p></div><p class="stats-name">venu en aide</p>
+                        <div class="stats-number"><p>{{$user->helps}}x</p></div><p class="stats-name">venu en aide</p>
                     </li>
                     <li class="stats-elements">
-                        <div class="stats-number"><p>208</p></div><p class="stats-name">interractions</p>
+                        <div class="stats-number"><p>{{$user->interactions}}</p></div><p class="stats-name">interractions</p>
                     </li>
                 </ul>
             </div>
-            <div class="profil-description ">
+            <div class="row">
+            <div class="profil-description">
                 <h4>Description</h4>
                 
-                {!! Form::textarea('description', $user->description) !!}
+                {!! Form::textarea('description', $user->description, ['class'=>"col-md-12"]) !!}
                 
             </div>
-            <button class="profil-contact-btn">Modifier</button>
+        </div>
+
+            {{Form::submit("Modifier", ["class"=>"profil-contact-btn"])}}
+            {{-- <button type="submit" class="profil-contact-btn">Modifier</button> --}}
         </div>
             
         

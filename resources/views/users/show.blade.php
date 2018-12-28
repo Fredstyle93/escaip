@@ -1,3 +1,5 @@
+@extends ('layouts.app')
+@section('content')
 <div class="content-container profil">
         <div class="profil-header">
             <div class="profil-header-img">
@@ -13,11 +15,11 @@
                     <h2 class="profil-name">{{$user->firstName}} {{$user->lastName}}</h2>
 
                 </div>
-                {{--  @if(Auth::user() == $user )
-                    <a href="{{route('user.edit')}}" class="profil-modify-btn">Modifier le profil</a>
+                 @if(Auth::user()->id == $user->id )
+                    <a href="{{route('user.edit',$user->id)}}" class="profil-modify-btn">Modifier le profil</a>
                 @elseif(Auth::user() != $user)
                     <button class="profil-contact-btn"> <span class="sprite sprite-profil-message"></span> Contacter</button>
-                @endif  --}}
+                @endif 
             </div>
         </div>
 
@@ -107,3 +109,4 @@
             </div>
 
     </div>
+    @endsection

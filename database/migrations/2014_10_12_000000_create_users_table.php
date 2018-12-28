@@ -18,6 +18,10 @@ class CreateUsersTable extends Migration
             $table->string('firstName');
             $table->string('lastName');
             $table->string('userName');
+            $table->integer('posts');
+            $table->integer('interactions');
+            $table->integer('helps');
+          //  $table->foreign('school_id')->references('id')->on('schools');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');

@@ -1,13 +1,20 @@
+
+
+
+    
+
+
 <div class="sidebar col-lg-3">
     <nav class="sidebar-nav">
         <ul class="sidebar-menu">
             <div class="sidebar-menu-section">
-                <a href="index.html" class="sidebar-menu-link">
+            <a href="{{route('index')}}" class="sidebar-menu-link">
                     <li class="sidebar-menu-items sidebar-menu-items-selected">
                         <span class="sprite sprite-sidebar-home"></span> <span class="sidebar-menu-items-name">Accueil</span>
                     </li>
                 </a>
-                <a href="profil.html" class="sidebar-menu-link">
+            @if(auth::check())
+            <a href="{{action('UserController@show',auth::user()->id)}}" class="sidebar-menu-link">
                     <li class="sidebar-menu-items locked">
                         <div class="bg-locked">
                             <span class="sprite sprite-sidebar-locked"></span>
@@ -15,6 +22,7 @@
                         <span class="sidebar-menu-items-name">Mon profil</span>
                     </li>
                 </a>
+                @endif
                 <a href="category.html" class="sidebar-menu-link">
                     <li class="sidebar-menu-items">
                         <span class="sprite sprite-sidebar-learning"></span> <span class="sidebar-menu-items-name">Cours</span>

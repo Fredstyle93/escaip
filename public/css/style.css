@@ -1427,6 +1427,12 @@ input {
     vertical-align: top;
   }
 }
+
+.hidden{
+  background-color: none;
+  border: none;
+
+}
 .project .project-content {
   padding-top: 45px;
 }

@@ -59,7 +59,7 @@ class UserController extends Controller
     public function edit($id)
     {
         $user = User::findOrFail($id);
-        return view('users.show', compact('user'));
+        return view('users.edit', compact('user'));
     }
 
     /**
@@ -71,7 +71,16 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user = User::find($id);
+    $user->lastName = $request->input('lastName');
+    $user->firstName = $request->input('firstName');
+    $user->description = $request->input('description');
+    $user->avatar = $request->input('avatar');
+    $user->save();
+
+        
+
+
     }
 
     /**
