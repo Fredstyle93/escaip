@@ -1,8 +1,9 @@
-@extends('layouts.app')
+@extends('template.content')
 
-@section('content')
+@section('main')
     <h1>salut</h1>
-    
-    {!! Form::open() !!}
-    
+@endsection
+
+@section('sidebar')
+    @include('template.sidebar', ['tab'=>'welcome'])
 @endsection
