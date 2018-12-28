@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\User;
+use App\Skill;
 use  Illuminate\Support\Facades\DB;
 
 class UsersTableSeeder extends Seeder
