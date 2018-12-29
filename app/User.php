@@ -2,10 +2,11 @@
 
 namespace App;
 
+use App\Skill;
+use App\School;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use App\Skill;
 
 class User extends Authenticatable
 {
@@ -34,6 +35,13 @@ class User extends Authenticatable
     {
 
         return $this->belongsToMany(Skill::class, 'skill_user');
+
+    }
+    public function schools()
+
+    {
+
+        return $this->belongsToMany(School::class, 'school_user');
 
     }
 

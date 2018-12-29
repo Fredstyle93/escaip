@@ -34,8 +34,9 @@
             <div class="profil-details row">
                 <ul class="profil-details-list col-6 col-lg-6">
                     <li class="details-elements">
-                       <h4>{!! Form::label('school_id', 'Cégep') !!}</h4>                 
-                       {{--   {!! Form::select('school_id', $schools, $user->school_id) !!} --}}
+                       <h4>{!! Form::label('school', 'Cégep') !!}</h4>  
+                                   
+                         {!! Form::select("school", $school->pluck('name'), ['id' => 'name']) !!}
                     </li>
                     <li class="details-elements "> 
                         <h4>Compétences </h4>

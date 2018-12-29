@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\User;
 use App\Skill;
+use App\School;
 use App\SkillUser;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -76,7 +77,8 @@ class UserController extends Controller
     public function edit(Guard $auth)
     {
         $user = $auth->user();
-        return view('users.edit', compact('user'));
+        $school = School::all();
+        return view('users.edit', compact('user','school'));
     }
 
     /**
@@ -99,7 +101,17 @@ class UserController extends Controller
     // $skillUser = SkillUser::all();
 
         
-
+         if(Input::get('school') !== null){
+             $schoolData = Input::get('school');
+             DB::table('school_user')
+             ->where('user_id', $auth->user()->id)
+             ->update([
+                 "school_id" => $schoolData+1
+             ]);
+ 
+             
+             //$user->schools()->sync($schoolData);
+         }
          if(Input::get('checkbox') !== null){
             
             $data = Input::get('checkbox');

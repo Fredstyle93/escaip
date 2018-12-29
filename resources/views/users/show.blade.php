@@ -34,8 +34,9 @@
                 <li class="details-elements">
                     <h4>Institution(s) scolaire</h4>
                     <ul class="scholarship-list">
-                        <li class="scholarship-list-elements">École Polyvalente Curé-Mercure</li>
-                        <li class="scholarship-list-elements"> Cégep de St-Jérôme</li>
+                        @foreach($user->schools as $userSchool)
+                        <li class="knowledge-list-elements"> {{$userSchool->name}}</li>
+                        @endforeach
                     </ul>
 
                 </li>
