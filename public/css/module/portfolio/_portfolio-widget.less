@@ -1,0 +1,33 @@
+@import 'variables/_variables';
+
+.portfolio-container{
+    margin: 0 auto;
+    padding: 15px;
+    /* display: inline-block; */
+    max-width: 330px;
+    .portfolios-widget{
+        // border-top-left-radius: @borderRadius;
+        // border-top-right-radius: @borderRadius;
+        .portfolios-category{
+            padding: 5px;
+            background-color: @purple;
+            color: @white;
+            border-top-left-radius: @borderRadius;
+            border-top-right-radius: @borderRadius;
+        }
+        .portfolios-header{
+    
+            color: @white;
+    
+            img{
+                position: relative;
+            }
+        }
+        .portfolios-body{
+            border-left: @borderPurple;
+            border-right: @borderPurple;
+            border-bottom: @borderPurple;
+        }
+        
+    }
+}

@@ -53,6 +53,10 @@ input {
   width: 35px;
   height: 35px;
 }
+.profil-img-portfolio-widget {
+  width: 65px;
+  height: 65px;
+}
 .profil-img-navbar {
   width: 30px;
   height: 30px;
@@ -1321,6 +1325,30 @@ input {
 .portfolio-projects .portfolio-projects-container .portfolio-projects-7 {
   background-image: url(../../../img/kiwi_6013.jpg);
 }
+.portfolio-container {
+  margin: 0 auto;
+  padding: 15px;
+  /* display: inline-block; */
+  max-width: 330px;
+}
+.portfolio-container .portfolios-widget .portfolios-category {
+  padding: 5px;
+  background-color: #986ece;
+  color: #ffffff;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.portfolio-container .portfolios-widget .portfolios-header {
+  color: #ffffff;
+}
+.portfolio-container .portfolios-widget .portfolios-header img {
+  position: relative;
+}
+.portfolio-container .portfolios-widget .portfolios-body {
+  border-left: 1px solid rgba(166, 147, 204, 0.4);
+  border-right: 1px solid rgba(166, 147, 204, 0.4);
+  border-bottom: 1px solid rgba(166, 147, 204, 0.4);
+}
 .project {
   padding: 20px;
 }
@@ -1426,12 +1454,6 @@ input {
     display: inline-block;
     vertical-align: top;
   }
-}
-
-.hidden{
-  background-color: none;
-  border: none;
-
 }
 .project .project-content {
   padding-top: 45px;

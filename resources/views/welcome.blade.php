@@ -4,10 +4,11 @@
 
 
 
-    <h1>Utilisateurs</h1>    
+    <h1>Section Portfolios</h1>    
     
+    <div class="row"></div>
     
-     {{-- <div class="container"> --}}
+     {{-- <div class="container">
 
         <div class="row">
         
@@ -48,7 +49,7 @@
                 </div>
             @endforeach
         </div>
-    {{-- </div>  --}}
+    </div>  --}}
         
 
 
