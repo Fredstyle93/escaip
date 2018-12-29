@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use App\Skill;
+use App\SkillUser;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
@@ -14,7 +18,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::all();
+        $users = User::paginate(3);
         return view('users.index', compact('users'));
     }
 
@@ -36,7 +40,19 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $this ->validate($request,[
+            "name"=>"required",
+            "email"=>"required",
+          ]);
+
+        $user = new User;
+        
+        $request->get('content');
+
+        $user->firstName = $request->name;
+
+        
     }
 
     /**
@@ -76,10 +92,62 @@ class UserController extends Controller
     $user->firstName = $request->input('firstName');
     $user->description = $request->input('description');
     $user->avatar = $request->input('avatar');
-    $user->save();
+
+
+    // $skills = Skill::all();
+    // $skillUser = SkillUser::all();
 
         
 
+         if(Input::get('checkbox') !== null){
+            
+            
+            $data = Input::get('checkbox');
+
+                $user->skills()->sync($data);
+            
+
+         }
+
+        /* 
+     $query =   DB::table('skill_user')->select("user_id", "$user->id");
+        DB::table('skill_user')
+            ->where('user_id', $user->id)
+            ->update([
+                "skill_id" => $data
+            ]);
+
+        /*
+        foreach($data['checkbox'] as $value){
+
+            $skillUser = DB::table('skill_user')->where("user_id",$user->id)->update([
+              "skill_id"=>$skills   , "name" => $value
+            ]);
+            
+            var_dump($value);
+           
+                
+        }
+       
+/*
+        $skills[]
+            if($data['checkbox'] !== $skills[])
+    dd($data["checkbox"]);
+    foreach($MyCheckBox as $choice){
+        dd($choice->name);
+    }
+
+    if($request->hasFile('avatar')){
+        $avatar = $request->file('avatar');
+        $avatarName = time() . '.' . $avatar->getClientOriginalExtension();
+        $location = public_path('img/avatars/' . $avatarName);
+        Image::make($avatar)->fit(950, 960)->save($location);
+
+        $user->avatar = $avatarName;
+*/
+    $user->save();
+
+        return view('users.show', compact('user'));
 
     }
 

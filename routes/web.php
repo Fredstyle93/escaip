@@ -16,8 +16,8 @@ Auth::routes();
 
 Route::get('/', 'WelcomeController@index')->name('welcome');
 Route::get('/users', 'UserController@index');
-Route::get('/portfolios', 'UserController@index')->name('portfolios');
-
+//Route::get('/portfolios', 'UserController@index')->name('portfolios');
+Route::post('/users/create', 'UserController@store')->name('user.store');
 Route::get('/users/{user}', 'UserController@show')->name('user.show');
 
 

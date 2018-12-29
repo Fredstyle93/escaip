@@ -1,7 +1,8 @@
 @extends('layouts.app')
 @section('content')
 
-
+<link rel="stylesheet" href="{{asset('../bower_components/bootstrap/dist/css/bootstrap.min.css')}}">
+<link rel="stylesheet" href="{{asset('dist/css/AdminLTE.css')}}">
 
     {!! Form::model($user, ['method'=>'put', 'files' => true, 'route' =>['user.update', $user->id]]) !!}
 
@@ -36,8 +37,32 @@
                        <h4>{!! Form::label('school_id', 'Cégep') !!}</h4>                 
                        {{--   {!! Form::select('school_id', $schools, $user->school_id) !!} --}}
                     </li>
-                    <li class="details-elements"> 
+                    <li class="details-elements "> 
                         <h4>Compétences </h4>
+                        <div class="row">
+                            <div  class="col-6 checkBox">
+                                {{Form::checkbox('checkbox[]', 1,["class" => "form-group",])}}
+                                
+                                {{Form::checkbox('checkbox[]', 2,["class" => "form-group",])}}
+                               
+                                {{Form::checkbox('checkbox[]', 3,["class" => "form-group",])}}
+                                
+                                {{Form::checkbox('checkbox[]', 4,["class" => "form-group",])}}
+                               
+                                {{Form::checkbox('checkbox[]', 5,["class" => "form-group",])}}
+
+
+                            </div>
+                            <div class="col-6 checkbox-grp">
+                                    {{Form::label('checkBox', 'Programmation')}}
+                                    {{Form::label('checkBox', 'Photoshop')}}
+                                   {{Form::label('checkBox', 'Design Web')}}
+                                    {{Form::label('checkBox', 'Edition video')}}
+                                    {{Form::label('checkBox', 'Music')}}
+                            </div>
+
+                        </div>
+           
                         {{-- {!! Form::select('skills[]', App\Skill::pluck('name', 'id'), $user->skills->pluck('id'), ['multiple' => 'true', 'id' => '#demo']) !!} --}}
                     </li>
                 </ul>
@@ -75,6 +100,6 @@
     
 @endsection
 
-{{--  @section('sidebar')
-    @include('template.sidebar')
-@endsection  --}}
+@section('sidebar')
+    @include('template.sidebar', ['tab'=>'welcome'])
+@endsection
