@@ -25,3 +25,4 @@
 @section('sidebar')
     @include('template.sidebar', ['tab'=>'welcome'])
 @endsection
+

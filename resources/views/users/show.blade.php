@@ -1,5 +1,12 @@
 @extends ('layouts.app')
+
+    @section('sidebar')
+    @include('template.sidebar', ['tab'=>'welcome'])
+@endsection
+
 @section('content')
+<link rel="stylesheet" href="{{asset('bower_components/bootstrap/dist/css/bootstrap.min.css')}}">
+<link rel="stylesheet" href="{{asset('dist/css/AdminLTE.css')}}">
 <div class="content-container profil">
         <div class="profil-header">
             <div class="profil-header-img">
@@ -36,7 +43,9 @@
                 <li class="details-elements"> 
                     <h4>Connaissances </h4>
                     <ul class="knowledge-list">
-                        <li class="knowledge-list-elements">Multimédias </li>
+                        @foreach($user->skills as $userSkill)
+                        <li class="knowledge-list-elements">{{$userSkill->name}} </li>
+                        @endforeach
                         <li class="knowledge-list-elements"> </li>
                     </ul>
                 </li>
