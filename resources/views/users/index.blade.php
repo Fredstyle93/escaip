@@ -1,7 +1,5 @@
 @extends('layouts.app')
-@section('sidebar')
-    @include('template.sidebar', ['tab'=>'welcome'])
-@endsection
+
 
 @section('content')
 <link rel="stylesheet" href="{{asset('../bower_components/bootstrap/dist/css/bootstrap.min.css')}}">

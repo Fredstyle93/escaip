@@ -3032,6 +3032,11 @@ table.text-center th {
   box-shadow:  3px 34px 41px -7px rgba(0,0,0,0.32);
   -moz-box-shadow: 3px 34px 41px -7px rgba(0,0,0,0.32);
   box-shadow: 3px 34px 41px -7px rgba(0,0,0,0.32);
+  transition: .4s ease-in;
+}
+
+.box-widget:hover{
+  transform: scale(1.1);
 }
 .leftSide{
   position: relative;

@@ -1,10 +1,9 @@
 @extends ('layouts.app')
 
-    @section('sidebar')
-    @include('template.sidebar', ['tab'=>'welcome'])
-@endsection
+
 
 @section('content')
+
 <link rel="stylesheet" href="{{asset('bower_components/bootstrap/dist/css/bootstrap.min.css')}}">
 <link rel="stylesheet" href="{{asset('dist/css/AdminLTE.css')}}">
 <div class="content-container profil">
