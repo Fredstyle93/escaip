@@ -1,5 +1,6 @@
 @extends('layouts.app')
 
+<<<<<<< HEAD
 @section('content')
 
 <link rel="stylesheet" href="{{asset('../bower_components/bootstrap/dist/css/bootstrap.min.css')}}">
@@ -68,5 +69,21 @@
         
 
    
+=======
+@section('main')
+    <div class="content-container row">
+        <div class="content-grid col-12 col-sm-6 col-md-4 col-xl-3">
+            <a href="article.html" class="article-link">
+                <div class="content-article article-image">
+                    <div class="article-bg-title">
+                        <p class="article-title">
+                            Titre du projet
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+>>>>>>> 6d68a4524939b01d2182e39398aeb5eb5025be43
 @endsection
 

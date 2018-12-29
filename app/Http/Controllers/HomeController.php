@@ -24,7 +24,11 @@ class HomeController extends Controller
      */
     public function index()
     {
+<<<<<<< HEAD
         $users = User::paginate(3);
         return view('users.index', compact('users'));
+=======
+        return view('home');
+>>>>>>> 6d68a4524939b01d2182e39398aeb5eb5025be43
     }
 }
