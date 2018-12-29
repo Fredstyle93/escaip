@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\User;
 use App\Skill;
 use App\SkillUser;
-use Illuminate\Support\Facades\Input;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Contracts\Auth\Guard;
+use Illuminate\Support\Facades\Input;
 
 class UserController extends Controller
 {
@@ -72,9 +73,9 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Guard $auth)
     {
-        $user = User::findOrFail($id);
+        $user = $auth->user();
         return view('users.edit', compact('user'));
     }
 
@@ -85,9 +86,9 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Guard $auth)
     {
-        $user = User::find($id);
+        $user = $auth->user();
     $user->lastName = $request->input('lastName');
     $user->firstName = $request->input('firstName');
     $user->description = $request->input('description');
@@ -101,12 +102,9 @@ class UserController extends Controller
 
          if(Input::get('checkbox') !== null){
             
-            
             $data = Input::get('checkbox');
-
-                $user->skills()->sync($data);
             
-
+                $user->skills()->sync($data);
          }
 
         /* 
