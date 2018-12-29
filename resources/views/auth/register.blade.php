@@ -8,7 +8,13 @@
                 <div class="card-header">{{ __('Register') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('user.store') }}">
+                    @if($errors->has('content'))
+                    @foreach($errors->all() as $error)
+                    {{$error}}
+                    @endforeach
+                    @endif
+
+                      {!! Form::open( ['route' =>['user.store'],'method'=>'post', 'files' => true, ]) !!}
                         @csrf
 
                         <div class="form-group row">
@@ -66,6 +72,8 @@
                             </div>
                         </div>
 
+                     
+
                         <div class="form-group row">
                             {{-- <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label> --}}
                             
@@ -104,6 +112,25 @@
 
                             <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            {{-- <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Prénom')  }}</label> --}}
+                            
+                            {!! Form::label('avatar', 'Avatar', ["class"=>"col-md-4 col-form-label text-md-right"]) !!}
+                            
+
+                            <div class="col-md-6">
+                                {{-- <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus> --}}
+                                
+                                {!! Form::file('avatar') !!}
+                                
+                                {{-- @if ($errors->has('name'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('name') }}</strong>
+                                    </span>
+                                @endif --}}
                             </div>
                         </div>
 

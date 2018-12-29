@@ -18,15 +18,15 @@ class CreateUsersTable extends Migration
             $table->string('firstName');
             $table->string('lastName');
             $table->string('userName');
-            $table->integer('posts');
-            $table->integer('interactions');
-            $table->integer('helps');
+            $table->integer('posts')->nullable();
+            $table->integer('interactions')->nullable();
+            $table->integer('helps')->nullable();
           //  $table->foreign('school_id')->references('id')->on('schools');
-            $table->string('email')->unique();
+            $table->string('email')->unique()->default('email@gmail.com');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->text('description');
-            $table->string('avatar')->nullable();
+            $table->text('description')->nullable();;
+            $table->string('avatar')->default('avatar.jpg');
             $table->integer('level')->default('0');  // verifier admin 0 = membre normal
             $table->rememberToken();
             $table->timestamps();

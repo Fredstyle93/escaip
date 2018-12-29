@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Image;
 use App\User;
 use App\Skill;
 use App\School;
@@ -9,6 +10,7 @@ use App\SkillUser;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Contracts\Auth\Guard;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
 
 class UserController extends Controller
@@ -42,19 +44,45 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
+        $request->all();
+        $users = User::all();
 
         $this ->validate($request,[
-            "name"=>"required",
             "email"=>"required",
+            "password"=>"required",
+            "userName"=>"required",
+            "lastName"=>"required",
+            "firstName"=>"required",
           ]);
+          
+        $user = new User();
+       
+    
+        $user->firstName = $request->firstName;
+        $user->email = $request->email;
+        $user->lastName = $request->lastName;
+        $user->userName = $request->userName;
+        $user->password = $request->password;
 
-        $user = new User;
+        if($request->hasFile('avatar')){
+            $avatar = $request->file('avatar');
+            $avatarName = time() . '.' . $avatar->getClientOriginalExtension();
+            $location = public_path('img/avatars/' . $avatarName);
+            Image::make($avatar)->fit(950, 960)->save($location);
+            
+            $user->avatar = $avatarName;
+            
+           
         
-        $request->get('content');
+            }
+            
 
-        $user->firstName = $request->name;
+            $user->save();
 
-        
+           $connection = User::find($user->id);
+           Auth::login($connection);
+            return view('users.index', compact('users'));
+
     }
 
     /**
@@ -139,27 +167,29 @@ class UserController extends Controller
                 
         }
        
-/*
+
         $skills[]
             if($data['checkbox'] !== $skills[])
     dd($data["checkbox"]);
     foreach($MyCheckBox as $choice){
         dd($choice->name);
     }
-
-    if($request->hasFile('avatar')){
-        $avatar = $request->file('avatar');
-        $avatarName = time() . '.' . $avatar->getClientOriginalExtension();
-        $location = public_path('img/avatars/' . $avatarName);
-        Image::make($avatar)->fit(950, 960)->save($location);
-
-        $user->avatar = $avatarName;
 */
+
+if($request->hasFile('avatar')){
+    $avatar = $request->file('avatar');
+    $avatarName = time() . '.' . $avatar->getClientOriginalExtension();
+    $location = public_path('img/avatars/' . $avatarName);
+    Image::make($avatar)->fit(950, 960)->save($location);
+
+    $user->avatar = $avatarName;
     $user->save();
 
         return view('users.show', compact('user'));
 
     }
+}
+    
 
     /**
      * Remove the specified resource from storage.

@@ -29,7 +29,10 @@
                             @endif
                             {{-- <a href="{{route('requests')}}"><li class="subnav-list-items"><span></span>Demandes de contact</li></a> --}}
                             <a><li class="subnav-list-items"><span></span>Aide</li></a>
-                            <a><li class="subnav-list-items"><span></span>Paramètre</li></a>
+                            @if(Auth::check())
+                            <a href="{{route('user.show',auth::user()->id)}}"><li class="subnav-list-items"> Mon profil</li></a>
+                            @endif
+                                <a ><li class="subnav-list-items"><span></span>Paramètre</li></a>
                             <a><li class="subnav-list-items"><span></span>Nous contacter</li></a>
                             <a href="{{route('logout')}}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
                                 <li class="subnav-list-items"><span></span>Se déconnecter</li>

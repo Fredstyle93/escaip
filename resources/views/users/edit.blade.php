@@ -14,12 +14,12 @@
 
                 <div class="profil-container">
                     <div class="profil-container-image">
-                        <img src="{{asset('img/avatars/' . $user->avatar)}}.jpg" alt="{{$user->name}}" class="profil-image">
+                        <img src="{{asset('img/avatars/' . $user->avatar)}}" alt="{{$user->name}}" class="profil-image">
                     </div>
                     <div class="profil-infos ">
                         
                         <i class="fas fa-cog">
-                        {!! Form::file('avatar',["class"=>"hidden"]) !!}
+                        {!! Form::file('avatar') !!}
                          </i>
                         {!! Form::text('firstName', $user->firstName) !!}
                         {!! Form::text('lastName', $user->lastName) !!}
