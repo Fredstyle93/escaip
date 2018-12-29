@@ -3036,7 +3036,7 @@ table.text-center th {
 }
 
 .box-widget:hover{
-  transform: scale(1.1);
+  transform: scale(1.);
 }
 .leftSide{
   position: relative;

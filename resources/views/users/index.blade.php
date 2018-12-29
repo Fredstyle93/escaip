@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@include('template.content')
+{{-- @include('template.content') --}}
 @section('content')
 <link rel="stylesheet" href="{{asset('../bower_components/bootstrap/dist/css/bootstrap.min.css')}}">
 <link rel="stylesheet" href="{{asset('dist/css/AdminLTE.css')}}">

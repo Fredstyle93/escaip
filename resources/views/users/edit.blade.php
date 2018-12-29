@@ -41,15 +41,15 @@
                         <h4>Compétences </h4>
                         <div class="row">
                             <div  class="col-6 checkBox">
-                                {{Form::checkbox('checkbox[]', 1,["class" => "form-group",])}}
+                                {{Form::checkbox('checkbox[]', 1,false,["class" => "form-group"])}}
                                 
-                                {{Form::checkbox('checkbox[]', 2,["class" => "form-group",])}}
+                                {{Form::checkbox('checkbox[]', 2,false,["class" => "form-group"])}}
                                
-                                {{Form::checkbox('checkbox[]', 3,["class" => "form-group",])}}
+                                {{Form::checkbox('checkbox[]', 3,false,["class" => "form-group"])}}
                                 
-                                {{Form::checkbox('checkbox[]', 4,["class" => "form-group",])}}
+                                {{Form::checkbox('checkbox[]', 4,false,["class" => "form-group"])}}
                                
-                                {{Form::checkbox('checkbox[]', 5,["class" => "form-group",])}}
+                                {{Form::checkbox('checkbox[]', 5,false,["class" => "form-group"])}}
 
 
                             </div>
