@@ -1,5 +1,4 @@
 
-<div class="sidebar col-lg-3 ">
         <nav class="sidebar-nav">
             <ul class="sidebar-menu">
                 <div class="sidebar-menu-section">
@@ -40,4 +39,3 @@
                 </div>
             </ul>
         </nav>
-    </div>

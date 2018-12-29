@@ -21,9 +21,9 @@
                     <h2 class="profil-name">{{$user->firstName}} {{$user->lastName}}</h2>
 
                 </div>
-                 @if(Auth::user()->id == $user->id )
+                 @if(Auth::user())
                     <a href="{{route('user.edit',$user->id)}}" class="profil-modify-btn">Modifier le profil</a>
-                @elseif(Auth::user() != $user)
+                @else
                     <button class="profil-contact-btn"> <span class="sprite sprite-profil-message"></span> Contacter</button>
                 @endif 
             </div>
@@ -74,7 +74,7 @@
         <div class="profil-description ">
            <h4>Description</h4>
             <p class="description-text">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum ducimus nostrum quia nemo odit mollitia. Iste ullam nemo delectus cum excepturi sint, alias dolore ipsam quisquam veritatis, laborum assumenda perferendis!Esit amet, consectetur adipisicing elit. Harum ducimus nostrum quia nemo odit mollitia. Iste ullam nemo delectus cum excepturi sint, alias dolore ipsam quisquam veritatis, laborum assumenda perferendis!
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum ducimus nostrum quia nemo odit mollitia. Iste ullam nemo delectus cum excepturi sint, alias dolore ipsam quisquam veritatis, laborum assumenda perferendis!Esit amet, consectetur adipisicing elit. Harum ducimus nostrum quia nemo odit mollitia. Iste ullam nemo delectus cum excepturi sint, alias dolore ipsam quisquam veritatis, laborum assumenda perferendis!
             </p>
         </div>
         <div class="buttons-container">

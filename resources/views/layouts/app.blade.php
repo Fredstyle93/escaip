@@ -21,7 +21,7 @@
     <div class="hide"></div>
 
     <!-- --------------------------------- CONTENT --------------------------------- -->
-    @include('template.sidebar', ['tab'=>'welcome'])
+    
     <div class="content">
         <div class="l-container" style="margin-top: 100px;">
             
