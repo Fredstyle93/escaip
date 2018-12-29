@@ -54,8 +54,8 @@ input {
   height: 35px;
 }
 .profil-img-portfolio-widget {
-  width: 65px;
-  height: 65px;
+  width: 75px;
+  height: 75px;
 }
 .profil-img-navbar {
   width: 30px;
@@ -1339,15 +1339,32 @@ input {
   border-top-right-radius: 10px;
 }
 .portfolio-container .portfolios-widget .portfolios-header {
+  height: 80px;
   color: #ffffff;
+  padding: 0 10px;
 }
 .portfolio-container .portfolios-widget .portfolios-header img {
   position: relative;
+  top: 30px;
+}
+.portfolio-container .portfolios-widget .portfolios-header p {
+  display: inline-block;
+  vertical-align: bottom;
+  color: black;
 }
 .portfolio-container .portfolios-widget .portfolios-body {
+  padding: 10px;
   border-left: 1px solid rgba(166, 147, 204, 0.4);
   border-right: 1px solid rgba(166, 147, 204, 0.4);
   border-bottom: 1px solid rgba(166, 147, 204, 0.4);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.portfolio-container .portfolios-widget .portfolios-body .portfolios-nb-views {
+  margin-left: 74px;
+}
+.portfolio-container .portfolios-widget .portfolios-body .portfolios-resume {
+  margin-top: 20px;
 }
 .project {
   padding: 20px;
