@@ -7,15 +7,9 @@
             <div class="card">
                 <div class="card-header">{{ __('Register') }}</div>
 
-<<<<<<< HEAD
                 <div class="card-body">
                     <form method="POST" action="{{ route('user.store') }}">
                         @csrf
-=======
-                <div class="card-body">                        
-                        {!! Form::open() !!}
-                        {{-- @csrf --}}
->>>>>>> 6d68a4524939b01d2182e39398aeb5eb5025be43
 
                         <div class="form-group row">
                             {{-- <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Prénom')  }}</label> --}}
