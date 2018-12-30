@@ -97,6 +97,17 @@ class UserController extends Controller
     }
 
     /**
+     * Display the specified profile's user.
+     *
+     * @param  Guard  $auth
+     * @return \Illuminate\Http\Response
+     */
+    public function profile(Guard $auth){
+        $user = $auth->user();
+        return view('users.profile', compact('user'));
+    }
+
+    /**
      * Show the form for editing the specified resource.
      *
      * @param  int  $id

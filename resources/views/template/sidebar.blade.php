@@ -8,8 +8,8 @@
                         </li>
                     </a>
                     @auth()
-                        <a href="{{route('user.show',Auth::user()->id)}}" class="sidebar-menu-link">
-                            <li class="sidebar-menu-items locked {{ $tab == 'profil' ?  'sidebar-menu-items-selected' : "" }}">
+                        <a href="{{route('profile')}}" class="sidebar-menu-link">
+                            <li class="sidebar-menu-items locked {{ $tab == 'profile' ?  'sidebar-menu-items-selected' : "" }}">
                                 <div class="bg-locked">
                                     <img src="{{asset('img/avatars/' . Auth::user()->avatar)}}" alt="{{Auth::user()->name}}" class="profil-img profil-img-sidebar">
                                 </div>

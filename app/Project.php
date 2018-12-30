@@ -9,6 +9,11 @@ use App\User;
 
 class Project extends Model
 {
+
+    protected $fillable = [
+        'title', 'subTitle', 'description', 'imageProject','user_id', 'category_id'
+    ];
+
     
     public function users()
 

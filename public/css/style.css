@@ -414,6 +414,25 @@ input {
   display: inline-block;
   vertical-align: middle;
 }
+.spriteHTML {
+  cursor: pointer;
+}
+.spriteHTML .add-post-icon {
+  margin-top: 8px;
+  padding: 5px;
+  display: inline-block;
+  vertical-align: middle;
+  color: #7f7f7f;
+  font-size: 40px;
+  line-height: 0.5;
+  border: #7f7f7f 3px solid;
+  border-radius: 100%;
+}
+.spriteHTML .add-post-icon:hover {
+  background-color: #7f7f7f;
+  color: #ffffff;
+  transition: .5s;
+}
 .sprite-sidebar-home {
   width: 17px;
   height: 18px;
@@ -972,9 +991,6 @@ input {
   padding: 5px 25px;
   transition: .5s;
 }
-.students-wrapper .students-header {
-  margin: 10px 0;
-}
 .students-wrapper .carousel-students {
   padding: 0 12px;
   transition: .5s;
@@ -998,6 +1014,10 @@ input {
   padding: 5px 10px;
   border-radius: 0 0 13px 13px;
   background-color: rgba(152, 110, 206, 0.2);
+}
+.students-header {
+  margin: 10px 0;
+  padding: 0 15px;
 }
 @media (max-width: 685px) {
   .new-post {
@@ -1517,6 +1537,9 @@ input {
 .post-form .post-form-header {
   padding-bottom: 15px;
   border-bottom: 1px solid #e6e6e6;
+}
+.add-post-form {
+  display: none;
 }
 .post-form-learning {
   display: none;
@@ -2065,6 +2088,14 @@ input {
 }
 .learning-hover {
   background-color: red;
+}
+.add-post-icon-clicked {
+  background-color: #7f7f7f;
+  color: #ffffff !important;
+  transition: .5s;
+}
+.post-form-isActive {
+  display: block;
 }
 .learning-hover {
   display: inline-block;

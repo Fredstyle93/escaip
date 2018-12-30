@@ -46,6 +46,7 @@
     {{-- <script type="text/javascript" src="{{asset('js/front/calendar.js')}}"></script> --}}
     <script type="text/javascript" src="{{asset('js/front/burgerMenu.js')}}"></script> 
     <script type="text/javascript" src="{{asset('js/front/navbar-subnav.js')}}"></script> 
+    <script type="text/javascript" src="{{asset('js/front/newPost.js')}}"></script>
 
 </body>
 </html>

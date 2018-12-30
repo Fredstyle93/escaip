@@ -14,7 +14,7 @@
                     @endforeach
                     @endif
 
-                      {!! Form::open( ['route' =>['user.store'],'method'=>'post', 'files' => true, ]) !!}
+                      {!! Form::open( ['uri' => 'register', 'files' => true, ]) !!}
                         @csrf
 
                         <div class="form-group row">

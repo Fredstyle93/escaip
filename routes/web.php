@@ -15,15 +15,32 @@
 Auth::routes();
 
 Route::get('/', 'WelcomeController@index')->name('welcome');
-Route::get('/users', 'UserController@index');
-//Route::get('/portfolios', 'UserController@index')->name('portfolios');
-Route::post('/users/create', 'UserController@store')->name('user.store');
-Route::get('/users/{user}', 'UserController@show')->name('user.show');
 
 
-Route::group(['middleware'=>'auth'],function(){
-    Route::get('/profil', 'UserController@show')->name('profil');
-    Route::get('/profil/edit', 'UserController@edit')->name('user.edit');
-    Route::put('/profil/update', 'UserController@update')->name('user.update');
-    Route::get('/home', 'HomeController@index')->name('home');
+Route::group(['prefix' => 'users'], function() {
+    Route::get('', 'UserController@index');
+    Route::post('create', 'UserController@store')->name('user.store');
+    Route::get('{user}', 'UserController@show')->name('user.show');
 });
+
+
+
+/**
+ *  All routes require auth's middleware  
+ */
+Route::group(['middleware'=>'auth'],function(){
+    
+    Route::group(['prefix' => 'profile'], function() {
+        Route::get('', 'UserController@profile')->name('profile');
+        Route::get('edit', 'UserController@edit')->name('profile.edit');
+        Route::put('edit', 'UserController@update')->name('profile.update');
+    });
+    
+    Route::get('/home', 'HomeController@index')->name('home');
+    Route::post('/home', 'ProjectController@store')->name('home');
+});
+
+Route::resource('project', 'ProjectController');
+Route::resource('category', 'CategoryController');
+Route::resource('school', 'SchoolController');
+Route::resource('skill', 'SkillController');

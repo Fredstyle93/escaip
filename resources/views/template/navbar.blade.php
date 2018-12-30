@@ -1,7 +1,7 @@
 <div class="navbar">
         <div class="l-container">
             <div class="navbar-logo" style="{{Auth::user() ? 'margin-top: 11px;' : ''}}">
-                <a href="{{route('home')}}">
+                <a href="{{Auth::user() ? route('home') : route('welcome')}}">
                     <img src="{{asset('img/logo/logo.png')}}" class="logo" alt="nomSite">
                 </a>
             </div>
@@ -30,7 +30,7 @@
                             {{-- <a href="{{route('requests')}}"><li class="subnav-list-items"><span></span>Demandes de contact</li></a> --}}
                             <a><li class="subnav-list-items"><span></span>Aide</li></a>
                             @if(Auth::check())
-                            <a href="{{route('user.show',auth::user()->id)}}"><li class="subnav-list-items"> Mon profil</li></a>
+                            <a href="{{route('profile')}}"><li class="subnav-list-items"> Mon profil</li></a>
                             @endif
                                 <a ><li class="subnav-list-items"><span></span>Paramètre</li></a>
                             <a><li class="subnav-list-items"><span></span>Nous contacter</li></a>

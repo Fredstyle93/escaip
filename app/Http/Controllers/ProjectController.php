@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Project;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Contracts\Auth\Guard;
 
 class ProjectController extends Controller
 {
@@ -35,9 +36,26 @@ class ProjectController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, Guard $auth)
     {
-        //
+        $project = new Project();
+        $user = $auth->user();
+        // dd($request);
+        
+        DB::insert('insert into users (id, name) values (?, ?)', [1, 'Dayle'])
+        
+        $project->insert([
+            'title' => $request->title,
+            'subTitle' => $request->subTitle,
+            // 'subTitle' => $request->subTitle,
+            'description' => $request->description,
+            'imageProject' => $request->imageProject,
+            'user_id' => $user->id,
+            'category_id' => 1,
+        ]);
+        // $project->title = "salut";
+        $project->save();
+        return redirect()->route('home');
     }
 
     /**

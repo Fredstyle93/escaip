@@ -16,15 +16,22 @@ class CreateProjectsTable extends Migration
     {
         Schema::create('projects', function (Blueprint $table) {
             $table->increments("id")->unsigned();
-            $table->string("title")->nullable();
+            $table->string("title");
             $table->string("subTitle")->nullable();
+            $table->longText("description");
+            $table->string("imageProject");
+            $table->integer("nbViews")->default(0);
             $table->unsignedInteger("user_id");
+            $table->unsignedInteger("category_id");
             $table->foreign("user_id")->references('id')->on('users')->onDelete('cascade');
+            $table->foreign("category_id")->references('id')->on('categories')->onDelete('cascade');
+            $table->timestamps();
 
         });
         Schema::create('imagesProject', function (Blueprint $table) {
             $table->increments('id');
             $table->string("title");
+            $table->string("image")->nullable();
             $table->unsignedInteger("project_id");
             $table->foreign("project_id")->references('id')->on('projects')->onDelete('cascade');
 
