@@ -97,7 +97,7 @@ class UserController extends Controller
     }
 
     /**
-     * Display the specified profile's user.
+     * Display the authentificated profile's user.
      *
      * @param  Guard  $auth
      * @return \Illuminate\Http\Response

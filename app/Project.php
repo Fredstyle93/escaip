@@ -15,11 +15,15 @@ class Project extends Model
     ];
 
     
-    public function users()
+    public function user()
 
     {
 
         return $this->belongsTo("App\User");
 
+    }
+
+    public function category(){
+        return $this->belongsTo("App\Category");
     }
 }

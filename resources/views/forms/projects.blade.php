@@ -1,5 +1,5 @@
 
-{!! Form::open(['class'=>'form-learning']) !!}
+{!! Form::open(['route'=>'project.store', 'class'=>'form-learning', 'files' => true]) !!}
     
     <div class="input-container">
         {!! Form::label('title', 'Titre', ['class'=>'label-learning-title']) !!}
@@ -21,8 +21,8 @@
         </div> --}}
     {{--  @endif  --}}
     <div class="input-container">
-        {!! Form::label('imageProject', 'Image de votre projet', ['class'=>'label-learning-title']) !!}
-        {!! Form::file('imageProject') !!}
+        {!! Form::label('image', 'Image de votre projet', ['class'=>'label-learning-title']) !!}
+        {!! Form::file('image') !!}
     </div>
     <div class="input-container">
         {!! Form::label('description', 'Description', ['class' => 'label-learning-description']) !!}

@@ -6,6 +6,7 @@ use App\Project;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Contracts\Auth\Guard;
+use Intervention\Image\Facades\Image;
 
 class ProjectController extends Controller
 {
@@ -40,22 +41,38 @@ class ProjectController extends Controller
     {
         $project = new Project();
         $user = $auth->user();
+        
         // dd($request);
-        
-        DB::insert('insert into users (id, name) values (?, ?)', [1, 'Dayle'])
-        
-        $project->insert([
-            'title' => $request->title,
-            'subTitle' => $request->subTitle,
-            // 'subTitle' => $request->subTitle,
-            'description' => $request->description,
-            'imageProject' => $request->imageProject,
-            'user_id' => $user->id,
-            'category_id' => 1,
-        ]);
-        // $project->title = "salut";
+
+
+        /** 
+         * 
+         * validation à revoir
+        */
+
+        // $this->validate($request, [
+        //     'title' => 'required|min:3|max:250',
+        //     'subTitle' => 'min:3|max:250',
+        //     'description' => 'min:3',
+        //     'imageProject' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        // ]);
+            
+        $project->title = $request->title;
+        $project->subTitle = $request->subTitle;
+        $project->description = $request->description;
+        $project->user_id = $user->id;
+        $project->category_id = 1;
+
+        // dd("if");
+        if($request->hasFile('image')){
+            $image = $request->file('image');
+            $imageName = time() . '.' . $image->getClientOriginalExtension();
+            $location = public_path('img/projects/' . $imageName);
+            Image::make($image)->fit(950, 960)->save($location);
+            $project->imageProject = $imageName;
+        }
         $project->save();
-        return redirect()->route('home');
+        return redirect()->back();
     }
 
     /**

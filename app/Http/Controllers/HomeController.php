@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\User;
+use App\Project;
+use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
@@ -24,7 +25,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $users = User::all();
-        return view('home', compact('users'));
+        $users = User::paginate(3);
+        $projects = Project::all();
+        return view('home', compact('users', 'projects'));
     }
 }
