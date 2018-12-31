@@ -138,13 +138,14 @@ class UserController extends Controller
         
          if(Input::get('school') !== null){
              $schoolData = Input::get('school');
-             DB::table('school_user')
-             ->where('user_id', $auth->user()->id)
-             ->update([
-                 "school_id" => $schoolData+1
-             ]);
+            $user->schools()->sync($schoolData+1);
+            //  DB::table('school_user')
+            //  ->where('user_id', $auth->user()->id)
+            //  ->update([
+            //      "school_id" => 
+            //  ]);
  
-             
+
              //$user->schools()->sync($schoolData);
          }
          if(Input::get('checkbox') !== null){
