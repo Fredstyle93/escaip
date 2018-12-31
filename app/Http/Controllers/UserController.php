@@ -129,16 +129,12 @@ class UserController extends Controller
      */
     public function update(Request $request, Guard $auth)
     {
+        
         $user = $auth->user();
-    $user->lastName = $request->input('lastName');
-    $user->firstName = $request->input('firstName');
-    $user->description = $request->input('description');
-    $user->avatar = $request->input('avatar');
-
-
-    // $skills = Skill::all();
-    // $skillUser = SkillUser::all();
-
+        $user->lastName = $request->input('lastName');
+        $user->firstName = $request->input('firstName');
+        $user->description = $request->input('description');
+        // $user->avatar = $request->input('avatar');
         
          if(Input::get('school') !== null){
              $schoolData = Input::get('school');
@@ -158,47 +154,18 @@ class UserController extends Controller
                 $user->skills()->sync($data);
          }
 
-        /* 
-     $query =   DB::table('skill_user')->select("user_id", "$user->id");
-        DB::table('skill_user')
-            ->where('user_id', $user->id)
-            ->update([
-                "skill_id" => $data
-            ]);
+    if($request->hasFile('avatar')){
+        $avatar = $request->file('avatar');
+        $avatarName = time() . '.' . $avatar->getClientOriginalExtension();
+        $location = public_path('img/avatars/' . $avatarName);
+        Image::make($avatar)->fit(950, 960)->save($location);
 
-        /*
-        foreach($data['checkbox'] as $value){
-
-            $skillUser = DB::table('skill_user')->where("user_id",$user->id)->update([
-              "skill_id"=>$skills   , "name" => $value
-            ]);
-            
-            var_dump($value);
-           
-                
-        }
-       
-
-        $skills[]
-            if($data['checkbox'] !== $skills[])
-    dd($data["checkbox"]);
-    foreach($MyCheckBox as $choice){
-        dd($choice->name);
+        $user->avatar = $avatarName;
+        
+        
     }
-*/
-
-if($request->hasFile('avatar')){
-    $avatar = $request->file('avatar');
-    $avatarName = time() . '.' . $avatar->getClientOriginalExtension();
-    $location = public_path('img/avatars/' . $avatarName);
-    Image::make($avatar)->fit(950, 960)->save($location);
-
-    $user->avatar = $avatarName;
     $user->save();
-
-        return view('users.show', compact('user'));
-
-    }
+    return redirect()->route('profile');
 }
     
 

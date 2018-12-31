@@ -1,10 +1,6 @@
-@extends('layouts.app')
-@section('content')
-
-<link rel="stylesheet" href="{{asset('../bower_components/bootstrap/dist/css/bootstrap.min.css')}}">
-<link rel="stylesheet" href="{{asset('dist/css/AdminLTE.css')}}">
-
-    {!! Form::model($user, ['method'=>'put', 'files' => true, 'route' =>['user.update', $user->id]]) !!}
+@extends('template.content')
+@section('main')
+    {!! Form::model($user, ['method'=>'put', 'files' => true, 'route' =>['profile.update', $user->id]]) !!}
 
         <div class="content-container profil">
             <div class="profil-header">
