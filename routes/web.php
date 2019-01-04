@@ -18,6 +18,8 @@ Route::get('/', 'WelcomeController@index')->name('welcome');
 
 Route::group(['prefix' => 'admin'], function() {
     Route::get('home', 'AdminController@index');
+    Route::get('school/add','SchoolController@index')->name('school');
+    Route::get('school/edit/{school}','SchoolController@edit')->name('school.edit');
 
 });
 

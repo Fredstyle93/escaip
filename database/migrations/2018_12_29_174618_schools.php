@@ -16,6 +16,8 @@ class Schools extends Migration
         Schema::create('schools', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
+            $table->timestamps();
+            
         });
     }
 

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\School;
 use Illuminate\Http\Request;
 
 class SchoolController extends Controller
@@ -13,7 +14,8 @@ class SchoolController extends Controller
      */
     public function index()
     {
-        //
+        $schools = School::all();
+        return view ('admin.Schools.form',compact('schools'));
     }
 
     /**
@@ -34,7 +36,12 @@ class SchoolController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $school = new School();
+
+       $school->name = $request->name;
+       $school->save();
+       return redirect('school');
+        
     }
 
     /**
@@ -56,7 +63,7 @@ class SchoolController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('admin.Schools.update');
     }
 
     /**

@@ -45,7 +45,7 @@
               </a>
               <ul class="treeview-menu">
                 <li><a href="pages/charts/chartjs.html"><i class="fa fa-circle-o"></i> Catégorie</a></li>
-                <li><a href="pages/charts/morris.html"><i class="fa fa-circle-o"></i> École</a></li>
+                <li><a href="{{route('school')}}"><i class="fa fa-circle-o"></i> École</a></li>
                 <li><a href="pages/charts/flot.html"><i class="fa fa-circle-o"></i> Compétences</a></li>
                 <li><a href="pages/charts/inline.html"><i class="fa fa-circle-o"></i> Section</a></li>
               </ul>
@@ -60,7 +60,7 @@
               </a>
               <ul class="treeview-menu">
                 <li><a href="pages/UI/general.html"><i class="fa fa-circle-o"></i> Catégorie</a></li>
-                <li><a href="pages/UI/icons.html"><i class="fa fa-circle-o"></i> École</a></li>
+              <li><a href=""><i class="fa fa-circle-o"></i> École</a></li>
                 <li><a href="pages/UI/buttons.html"><i class="fa fa-circle-o"></i> Compétence</a></li>
                 <li><a href="pages/UI/sliders.html"><i class="fa fa-circle-o"></i> Section</a></li>
               </ul>
