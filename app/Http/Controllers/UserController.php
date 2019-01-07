@@ -26,6 +26,11 @@ class UserController extends Controller
         return view('users.index', compact('users'));
     }
 
+    public function display(){
+        $users = User::all();
+        return view('admin.users.index', compact('users'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -117,7 +122,8 @@ class UserController extends Controller
     {
         $user = $auth->user();
         $school = School::all();
-        return view('users.edit', compact('user','school'));
+        $skills = Skill::all();
+        return view('users.edit', compact('user','school','skills'));
     }
 
     /**
@@ -178,6 +184,9 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $user = User::findOrFail($id);
+        $user -> delete();
+
+        return redirect()->route('users.display');
     }
 }

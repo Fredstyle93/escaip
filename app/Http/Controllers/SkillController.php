@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Skill;
 use Illuminate\Http\Request;
 
 class SkillController extends Controller
@@ -13,7 +14,8 @@ class SkillController extends Controller
      */
     public function index()
     {
-        //
+        $skills = Skill::all();
+        return view ('admin.Skills.index',compact('skills'));
     }
 
     /**
@@ -23,7 +25,12 @@ class SkillController extends Controller
      */
     public function create()
     {
-        //
+        $skills = Skill::all();
+        $isUpdate = true;
+        return view ("admin.Skills.form", [
+            $isUpdate => true,
+            "skills" => $skills
+        ]);
     }
 
     /**
@@ -34,7 +41,11 @@ class SkillController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $skill = new Skill();
+
+        $skill->name = $request->name;
+        $skill->save();
+        return redirect('skill');
     }
 
     /**
@@ -56,7 +67,14 @@ class SkillController extends Controller
      */
     public function edit($id)
     {
-        //
+        $isUpdate = true;
+        $skill = Skill::find($id);
+        $skills = Skill::all();
+        return view ("admin.Skills.form", [
+            $isUpdate => false,
+            "skill" => $skill,
+            'skills' => $skills
+        ]);
     }
 
     /**
@@ -68,7 +86,11 @@ class SkillController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $skill = Skill::find($id);
+
+        $skill->name = $request->input('name');
+       $skill->save();
+       return redirect('admin/skill')->with('success', 'le Post a été mis à jour!');;
     }
 
     /**
@@ -79,6 +101,9 @@ class SkillController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $skills = Skill::all();
+        $skill = Skill::find($id);
+        $skill->delete();
+        return redirect('admin/skill');
     }
 }

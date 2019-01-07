@@ -4,10 +4,13 @@
           <!-- Sidebar user panel -->
           <div class="user-panel">
             <div class="pull-left image">
-              <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+              @if(Auth::check())
+              <img src="{{asset('img/avatars/' . Auth::user()->avatar)}}" class="img-circle" alt="User Image">
+              
             </div>
             <div class="pull-left info">
-              <p>Alexander Pierce</p>
+              <p>{{Auth::user()->firstName , Auth::user()->lastName}}</p>
+              @endif
               <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
             </div>
           </div>
@@ -28,7 +31,7 @@
 
 
             <li>
-              <a href="pages/widgets.html">
+            <a href="{{route('admin.home')}}">
                 <i class="fa fa-th"></i> <span>Home</span>
                 <span class="pull-right-container">
                   <small class="label pull-right bg-green">new</small>
@@ -37,17 +40,17 @@
             </li>
             <li class="treeview">
               <a href="#">
-                <i class="fa fa-plus"></i>
-                <span>Ajouter</span>
+                <i class="fa fa-edit"></i>
+                <span>Modifier</span>
                 <span class="pull-right-container">
                   <i class="fa fa-angle-left pull-right"></i>
                 </span>
               </a>
               <ul class="treeview-menu">
                 <li><a href="pages/charts/chartjs.html"><i class="fa fa-circle-o"></i> Catégorie</a></li>
-                <li><a href="{{route('school')}}"><i class="fa fa-circle-o"></i> École</a></li>
-                <li><a href="pages/charts/flot.html"><i class="fa fa-circle-o"></i> Compétences</a></li>
-                <li><a href="pages/charts/inline.html"><i class="fa fa-circle-o"></i> Section</a></li>
+                <li><a href="{{route('school')}}"><i class="fa fa-graduation-cap"></i> École</a></li>
+                <li><a href="{{route('skill')}}"><i class="fa fa-cogs"></i> Compétences</a></li>
+                <li><a href="{{route('users.display')}}"><i class="fa fa-user"></i>Usagers</a></li>
               </ul>
             </li>
             <li class="treeview">
@@ -62,7 +65,7 @@
                 <li><a href="pages/UI/general.html"><i class="fa fa-circle-o"></i> Catégorie</a></li>
               <li><a href=""><i class="fa fa-circle-o"></i> École</a></li>
                 <li><a href="pages/UI/buttons.html"><i class="fa fa-circle-o"></i> Compétence</a></li>
-                <li><a href="pages/UI/sliders.html"><i class="fa fa-circle-o"></i> Section</a></li>
+                <li><a href="pages/UI/sliders.html"><i class="fa fa-users"></i> Usager</a></li>
               </ul>
             </li>
             <li class="treeview">
@@ -81,27 +84,7 @@
                 <li><a href="pages/UI/sliders.html"><i class="fa fa-circle-o"></i> Portfolio</a></li>
               </ul>
             </li>
-            <li class="treeview">
-              <a href="#">
-                <i class="fa fa-table"></i> <span>Tables</span>
-                <span class="pull-right-container">
-                  <i class="fa fa-angle-left pull-right"></i>
-                </span>
-              </a>
-              <ul class="treeview-menu">
-                <li><a href="pages/tables/simple.html"><i class="fa fa-circle-o"></i> Simple tables</a></li>
-                <li><a href="pages/tables/data.html"><i class="fa fa-circle-o"></i> Data tables</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="pages/calendar.html">
-                <i class="fa fa-calendar"></i> <span>Calendar</span>
-                <span class="pull-right-container">
-                  <small class="label pull-right bg-red">3</small>
-                  <small class="label pull-right bg-blue">17</small>
-                </span>
-              </a>
-            </li>
+
             <li>
               <a href="pages/mailbox/mailbox.html">
                 <i class="fa fa-envelope"></i> <span>Mailbox</span>
@@ -112,25 +95,7 @@
                 </span>
               </a>
             </li>
-            <li class="treeview">
-              <a href="#">
-                <i class="fa fa-folder"></i> <span>Examples</span>
-                <span class="pull-right-container">
-                  <i class="fa fa-angle-left pull-right"></i>
-                </span>
-              </a>
-              <ul class="treeview-menu">
-                <li><a href="pages/examples/invoice.html"><i class="fa fa-circle-o"></i> Invoice</a></li>
-                <li><a href="pages/examples/profile.html"><i class="fa fa-circle-o"></i> Profile</a></li>
-                <li><a href="pages/examples/login.html"><i class="fa fa-circle-o"></i> Login</a></li>
-                <li><a href="pages/examples/register.html"><i class="fa fa-circle-o"></i> Register</a></li>
-                <li><a href="pages/examples/lockscreen.html"><i class="fa fa-circle-o"></i> Lockscreen</a></li>
-                <li><a href="pages/examples/404.html"><i class="fa fa-circle-o"></i> 404 Error</a></li>
-                <li><a href="pages/examples/500.html"><i class="fa fa-circle-o"></i> 500 Error</a></li>
-                <li><a href="pages/examples/blank.html"><i class="fa fa-circle-o"></i> Blank Page</a></li>
-                <li><a href="pages/examples/pace.html"><i class="fa fa-circle-o"></i> Pace Page</a></li>
-              </ul>
-            </li>
+
             <li class="treeview">
               <a href="#">
                 <i class="fa fa-share"></i> <span>Multilevel</span>

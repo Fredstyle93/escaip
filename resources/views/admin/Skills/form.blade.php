@@ -15,14 +15,14 @@
               </tr>
             </thead>
             <tbody>
-              @if(Route::current()->getName() === 'school.add')
-                @foreach($schools as $school)
+              @if(Route::current()->getName() === 'skill.add')
+                @foreach($skills as $skill)
               <tr>
             
                 
-                <th scope="row">{{$school->id}}</th>
+                <th scope="row">{{$skill->id}}</th>
            
-                <td>{{$school->name}}</td>
+                <td>{{$skill->name}}</td>
 
               </tr>
               @endforeach
@@ -30,9 +30,9 @@
               <tr>
             
                 
-                  <th scope="row">{{$school->id}}</th>
+                  <th scope="row">{{$skill->id}}</th>
              
-                  <td>{{$school->name}}</td>
+                  <td>{{$skill->name}}</td>
   
                 </tr>
               @endif
@@ -45,14 +45,14 @@
 
     </div>
 
-    {{Form::open(Route::current()->getName() === 'school.add'? ['action' => 'SchoolController@store', 'method'=> 'post'] : ['route' =>['school.update', $school->id], 'method'=> 'put'])}}
+    {{Form::open(Route::current()->getName() === 'skill.add'? ['action' => 'SkillController@store', 'method'=> 'post'] : ['route' =>['skill.update', $skill->id], 'method'=> 'put'])}}
         <div class="box-body">
 
             <div class="col-md-12">
 
                                 <div class="form-group">
             {{Form::label('name', 'Nom')}}
-            {{Form::text('name', $school->name,['class'=>'form-control'])}}
+            {{Form::text('name', $skill->name,['class'=>'form-control'])}}
           </div>
 
 
@@ -63,7 +63,7 @@
         <!-- /.box-body -->
 
         <div class="box-footer">
-        <button type="submit" class="btn btn-primary">{{Route::current()->getName() === 'school.add' ? "Ajouter" : "Modifier" }}</button>
+        <button type="submit" class="btn btn-primary">{{Route::current()->getName() === 'skill.add' ? "Ajouter" : "Modifier" }}</button>
         </div>
       </form>
 

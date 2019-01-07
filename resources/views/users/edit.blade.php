@@ -39,16 +39,11 @@
                         <div class="row">
 
                             <div class="col-12 checkbox-grp">
-                                    {{Form::label('checkBox', 'Programmation')}}
-                                    {{Form::checkbox('checkbox[]', 1,false,["class" => "form-group"])}}
-                                    {{Form::label('checkBox', 'Photoshop')}}
-                                    {{Form::checkbox('checkbox[]', 2,false,["class" => "form-group"])}}
-                                   {{Form::label('checkBox', 'Design Web')}}
-                                   {{Form::checkbox('checkbox[]', 3,false,["class" => "form-group"])}}
-                                    {{Form::label('checkBox', 'Edition video')}}
-                                    {{Form::checkbox('checkbox[]', 4,false,["class" => "form-group"])}}
-                                    {{Form::label('checkBox', 'Music')}}
-                                    {{Form::checkbox('checkbox[]', 5,false,["class" => "form-group"])}}
+                                @foreach($skills as $skill)
+                                    {{Form::label('checkBox', "$skill->name")}}
+                                    {{Form::checkbox('checkbox[]', $skill->id,false,["class" => "form-group"])}}
+                                    @endforeach
+
                             </div>
 
                         </div>

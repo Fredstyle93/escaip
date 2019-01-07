@@ -15,8 +15,10 @@ class SchoolController extends Controller
     public function index()
     {
         $schools = School::all();
-        return view ('admin.Schools.form',compact('schools'));
+        return view ('admin.Schools.index',compact('schools'));
     }
+
+
 
     /**
      * Show the form for creating a new resource.
@@ -25,7 +27,12 @@ class SchoolController extends Controller
      */
     public function create()
     {
-        //
+        $schools = School::all();
+        $isUpdate = true;
+        return view ("admin.Schools.form", [
+            $isUpdate => true,
+            "schools" => $schools
+        ]);
     }
 
     /**
@@ -63,7 +70,14 @@ class SchoolController extends Controller
      */
     public function edit($id)
     {
-        return view('admin.Schools.update');
+        $isUpdate = true;
+        $school = School::find($id);
+        $schools = School::all();
+        return view ("admin.Schools.form", [
+            $isUpdate => false,
+            "school" => $school,
+            'schools' => $schools
+        ]);
     }
 
     /**
@@ -75,7 +89,11 @@ class SchoolController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $school = School::find($id);
+
+         $school->name = $request->input('name');
+        $school->save();
+        return redirect('admin/school')->with('success', 'le Post a été mis à jour!');
     }
 
     /**
@@ -86,6 +104,10 @@ class SchoolController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $schools = School::all();
+        $school = School::find($id);
+        $school->delete();
+        return redirect('admin/school');
+        // return view('admin.Schools.index')->with('schools',$schools);
     }
 }
