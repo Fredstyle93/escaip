@@ -26,7 +26,8 @@
     <section class="content">
       <!-- Small boxes (Stat box) -->
       <div class="row">
-        @yield("template.content")
+        @section('content')
+        @show
 
         
 

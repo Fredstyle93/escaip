@@ -45,7 +45,7 @@
 
     </div>
 
-    {{Form::open(Route::current()->getName() === 'skill.add'? ['action' => 'SkillController@store', 'method'=> 'post'] : ['route' =>['skill.update', $skill->id], 'method'=> 'put'])}}
+    {{Form::open(Route::current()->getName() === 'skill.add'? ['route' => 'skill.add', 'method'=> 'post'] : ['route' =>['skill.update', $skill->id], 'method'=> 'put'])}}
         <div class="box-body">
 
             <div class="col-md-12">
