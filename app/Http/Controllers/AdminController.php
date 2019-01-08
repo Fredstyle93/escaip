@@ -13,7 +13,7 @@ class AdminController extends Controller
     use Adminable;
 
     public function Category(){
-        $categories = $this->indexAdmin('Category');
+        $categories = $this->indexAdmin('Category'); 
         return view('admin.categories.index', compact('categories'));
     }
 

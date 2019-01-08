@@ -29,6 +29,9 @@ trait Adminable{
             case 'Category':
                 return Category::all();
             break;
+            case 'Skill':
+                return Skill::all();
+            break;
         }
     }
 
