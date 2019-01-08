@@ -23,9 +23,10 @@ class AdminController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Guard $auth)
+    public function index()
     {
-        $this->home($auth);
+        $users = User::all();
+        return view('admin.home' , compact('users'));
     }
 
     /**
