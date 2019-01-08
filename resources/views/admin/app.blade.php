@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
-@include ('admin.head')
+@include ('admin.template.head')
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
 
-@include ('admin/header')
+@include ('admin.template.header')
   <!-- Left side column. contains the logo and sidebar -->
-@include('admin/sidebar')
+@include('admin.template.sidebar')
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -43,6 +43,6 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-@include('admin/footer')
+@include('admin.template.footer')
 </body>
 </html>

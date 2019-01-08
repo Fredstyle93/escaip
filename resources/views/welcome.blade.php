@@ -26,13 +26,12 @@
                                 @if (strlen($user->description) <= 150)
                                     {{$user->description}}
                                 @else
-                                    {{substr($user->description, 0, 150)}}
+                                    {{substr($user->description, 0, 150)}} ...
                                 @endif
                             </p>
                         </div>
                     </div>
                 </div>
-                
             @endforeach
         </div>
     </div>

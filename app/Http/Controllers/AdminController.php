@@ -3,19 +3,29 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use App\Traits\Adminable;
 use Illuminate\Http\Request;
+use Illuminate\Contracts\Auth\Guard;
 
 class AdminController extends Controller
 {
+
+    use Adminable;
+
+    public function Category(){
+        $categories = $this->indexAdmin('Category');
+        return view('admin.categories.index', compact('categories'));
+    }
+
+
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Guard $auth)
     {
-        $users = User::all();
-        return view('admin.index' , compact('users'));
+        $this->home($auth);
     }
 
     /**

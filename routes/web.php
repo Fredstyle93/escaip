@@ -33,6 +33,9 @@ Route::group(['prefix' => 'admin'], function() {
     Route::post('skill/{skill}/edit','SkillController@edit')->name('skill.edit');
     Route::put('skill/{skill}/update','SkillController@update')->name('skill.update');
 
+
+    Route::get('category','AdminController@category');
+
 });
 
 
@@ -62,7 +65,7 @@ Route::group(['middleware'=>'auth'],function(){
     Route::post('/home', 'ProjectController@store')->name('home');
 });
 
-Route::resource('project', 'ProjectController');
-Route::resource('category', 'CategoryController');
-Route::resource('school', 'SchoolController');
-Route::resource('skill', 'SkillController');
+// Route::resource('project', 'ProjectController');
+// Route::resource('category', 'CategoryController');
+// Route::resource('school', 'SchoolController');
+// Route::resource('skill', 'SkillController');
