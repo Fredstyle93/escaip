@@ -658,10 +658,10 @@ input {
   color: #986ece;
 }
 .calendar .calendar-control .control-container .control-buttons-list .add-project-button {
-  color: #db9314;
+  color: #cc8c72;
 }
 .calendar .calendar-control .control-container .control-buttons-list .add-event-button {
-  color: #48874c;
+  color: #a1cc72;
 }
 .calendar .calendar-panel {
   padding: 25px 10px;
@@ -686,7 +686,7 @@ input {
   width: 92px;
   height: 92px;
   padding: 12px;
-  border: 1px solid #db9314;
+  border: 1px solid #cc8c72;
   border-radius: 100%;
 }
 .calendar .calendar-panel .calendar-panel-container .panel-infos-container .panel-infos .panel-infos-header {
@@ -700,7 +700,7 @@ input {
 }
 .calendar .calendar-panel .calendar-panel-container .panel-infos-container .panel-infos .panel-infos-header .event-title {
   font-size: 1rem;
-  color: #db9314;
+  color: #cc8c72;
 }
 .calendar .calendar-panel .calendar-panel-container .panel-infos-container .panel-infos .panel-infos-header .event-title span {
   font-size: .7rem;
@@ -800,7 +800,6 @@ input {
   margin-bottom: 15px;
   max-width: 270px;
   border-radius: 10px;
-  border: 2px solid rgba(166, 147, 204, 0.7);
 }
 .categories .categories-items:hover .categories-image {
   opacity: .3;
@@ -828,7 +827,6 @@ input {
 }
 .categories .categories-items .categories-items-container .categories-items-title {
   margin-top: 35px;
-  color: #986ece;
   text-align: center;
 }
 .categories .categories-items .categories-items-container .categories-items-title h4 {
@@ -839,6 +837,54 @@ input {
     padding: 10px 0;
     margin-top: 0;
   }
+}
+.categories .category-art {
+  border: 1px solid #6ecacc;
+}
+.categories .category-making {
+  border: 1px solid #ccbf72;
+}
+.categories .category-multimedia {
+  border: 1px solid #986ece;
+}
+.categories .category-informatic {
+  border: 1px solid #7192cc;
+}
+.categories .category-beauty {
+  border: 1px solid #cc72ca;
+}
+.categories .category-sport {
+  border: 1px solid #cc8c72;
+}
+.categories .category-food {
+  border: 1px solid #cc6e6e;
+}
+.categories .category-humor {
+  border: 1px solid #a1cc72;
+}
+.categories .title-art {
+  color: #6ecacc;
+}
+.categories .title-making {
+  color: #ccbf72;
+}
+.categories .title-multimedia {
+  color: #986ece;
+}
+.categories .title-informatic {
+  color: #7192cc;
+}
+.categories .title-beauty {
+  color: #cc72ca;
+}
+.categories .title-sport {
+  color: #cc8c72;
+}
+.categories .title-food {
+  color: #cc6e6e;
+}
+.categories .title-humor {
+  color: #a1cc72;
 }
 .header {
   width: 100%;
@@ -966,7 +1012,7 @@ input {
   margin-bottom: 15px;
   max-width: 270px;
   border-radius: 10px;
-  border: 2px solid rgba(166, 147, 204, 0.7);
+  border: 1px solid #986ece;
 }
 .popular-categories .categories-items-feed:hover .categories-image {
   opacity: .3;
@@ -1389,7 +1435,6 @@ input {
 .project {
   padding: 20px;
 }
-
 .project .project-header .project-image-container {
   width: 130px;
   height: 110px;
@@ -1552,7 +1597,7 @@ input {
 }
 .post-form-event {
   display: none;
-  color: #48874c;
+  color: #a1cc72;
 }
 .post-form-event .post-form-event-title {
   font-size: 1.2rem;
@@ -1560,7 +1605,7 @@ input {
 }
 .post-form-project {
   display: none;
-  color: #db9314;
+  color: #cc8c72;
 }
 .post-form-project .post-form-project-title {
   font-size: 1.2rem;
@@ -1886,7 +1931,7 @@ input {
 }
 .profil .buttons-container .profil-button-container .profil-button {
   padding: 40px 70px;
-  border: 2px solid rgba(166, 147, 204, 0.7);
+  border: 1px solid #986ece;
   display: inline-block;
   font-size: 1.4rem;
   border-radius: 25px;
@@ -1901,7 +1946,7 @@ input {
   margin-bottom: 20px;
   padding: 0 25px 25px 25px;
   background-color: #ffffff;
-  border: 2px solid rgba(166, 147, 204, 0.7);
+  border: 1px solid #986ece;
   border-radius: 10px;
 }
 .profil .profil-historique .historic-grid {
@@ -1953,11 +1998,11 @@ input {
   margin-bottom: 5px;
 }
 .selected-day .calendar-day-header .calendar-weekday {
-  color: #db9314;
+  color: #cc8c72;
 }
 .selected-day .calendar-day-header .calendar-day {
   font-weight: bold;
-  color: #db9314 !important;
+  color: #cc8c72 !important;
   font-size: .8rem;
 }
 .selected-day .calendar-day-content {
@@ -1969,13 +2014,13 @@ input {
   font-size: 12px;
 }
 .selected-day .calendar-day-content .calendar-events-project {
-  color: #db9314;
+  color: #cc8c72;
 }
 .selected-day .calendar-day-content .calendar-events-learning {
   color: #986ece;
 }
 .selected-day .calendar-day-content .calendar-events-event {
-  color: #48874c;
+  color: #a1cc72;
 }
 .selected-day .calendar-day-footer .calendar-day-footer-container {
   padding: 10px;
@@ -2002,10 +2047,10 @@ input {
   border-bottom: 1px solid rgba(72, 135, 76, 0.4);
 }
 .selected-day-event .calendar-day-header .calendar-weekday {
-  color: #48874c;
+  color: #a1cc72;
 }
 .selected-day-event .calendar-day-header .calendar-day {
-  color: #48874c !important;
+  color: #a1cc72 !important;
 }
 .selected-day-event .calendar-day-footer {
   background-color: rgba(72, 135, 76, 0.4);
@@ -2017,10 +2062,10 @@ input {
   border-bottom: 1px solid rgba(219, 147, 20, 0.4);
 }
 .selected-day-project .calendar-day-header .calendar-weekday {
-  color: #db9314;
+  color: #cc8c72;
 }
 .selected-day-project .calendar-day-header .calendar-day {
-  color: #db9314 !important;
+  color: #cc8c72 !important;
 }
 .selected-day-project .calendar-day-footer {
   background-color: rgba(219, 147, 20, 0.4);

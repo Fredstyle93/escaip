@@ -1,5 +1,5 @@
 
-{!! Form::open(['route'=>'project.store', 'class'=>'form-learning', 'files' => true]) !!}
+{!! Form::open([ 'class'=>'form-learning', 'files' => true]) !!}
     
     <div class="input-container">
         {!! Form::label('title', 'Titre', ['class'=>'label-learning-title']) !!}

@@ -65,7 +65,11 @@ Route::group(['middleware'=>'auth'],function(){
     Route::post('/home', 'ProjectController@store')->name('home');
 });
 
-// Route::resource('project', 'ProjectController');
-// Route::resource('category', 'CategoryController');
+Route::group(['prefix' => 'portfolios'], function() {
+    // Route::get('', 'CategoryController@index')->name('category.index');
+});
+
+Route::resource('project', 'ProjectController');
+Route::resource('category', 'CategoryController');
 // Route::resource('school', 'SchoolController');
 // Route::resource('skill', 'SkillController');
