@@ -15,6 +15,44 @@
             </div>
         </header>
     @endif --}}
+    @guest()
+            @if(Route::current()->uri() == '/' )
+                <header class="header home">
+                    <div class="header-image">
+                        <div class="l-container">
+                            <div class="fast-register">
+                                <div class="fast-register-header">
+                                    <h2 class="fast-register-title">
+                                        Inscription simple, facile et gratuite !
+                                    </h2>
+                                </div>
+                                <div class="fast-register-body">
+                                    
+                                    {!! Form::open(['uri' => 'register', 'class'=>'fast-register-form']) !!}
+                                        <div class="register-input-container">
+                                            {!! Form::label('email', 'Adresse email') !!}
+                                            {!! Form::text('email', null) !!}
+                                        </div>
+                                        <div class="register-input-container">
+                                            {!! Form::label('password', 'Mot de passe') !!}
+                                            {!! Form::password('password', null, ['required'=>true]) !!}
+                                        </div>
+                                        <div class="register-input-container">
+                                            {!! Form::label('password-confirm', 'Confirmer le mot de passe') !!}
+                                            {!! Form::password('password_confirmation', null, ['required'=>true]) !!}
+                                            
+                                        </div>
+
+                                        <button> Enregistrer </button>
+                                    {!! Form::close() !!}
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+            @endif
+         @endguest
     <!-- --------------------------------- TOGGLE NAVIGATION --------------------------------- -->
     
     @include('template.toggle-navigation')

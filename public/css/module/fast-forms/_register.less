@@ -1,0 +1,66 @@
+@import '../../variables/_variables';
+
+.fast-register{
+    padding: 20px 35px;
+    max-width: 670px;
+    background-color: @whitePale;
+    border-radius: 29px;
+
+    position: relative;
+    top: 94px;
+
+    .fast-register-header{
+        padding: 0 0 15px 0;
+        border-bottom: @borderDark;
+
+        h2{
+            font-size: 22px;
+            font-weight: 300;
+            color: @purple;
+        }
+    }
+    .fast-register-body{
+        padding: 15px 0 0 0;
+
+        .fast-register-form{
+            padding-top: 10px; 
+            .register-input-container{
+                margin-bottom: 15px;
+
+                &:nth-child(3){
+                    display: inline-block;
+                    width: 45%;
+                }
+                &:nth-child(4){
+                    // display: inline-block;
+                    width: 45%;
+                    float: right;
+                }
+                label{
+                    color: @purple;
+                }
+                input{
+                    border: none;
+                    background-color: transparent;
+                    border-bottom: @borderPurple;
+                    border-radius: 0px;
+                    /* display: inline; */
+                    width: 100%;
+
+                }
+
+            }
+
+            button{
+                background-color: #986ece;
+                border: none;
+                padding: 9px 10px;
+                color: #ffffff;
+                border-radius: 8px;
+                font-weight: 500;
+                margin-top: 10px;
+                font-size: 13px;
+            }
+        }
+    }
+}
