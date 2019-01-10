@@ -45,7 +45,7 @@
 
     </div>
 
-    {{Form::open(Route::current()->getName() === 'school.add'? ['route' => 'school.add', 'method'=> 'post'] : ['route' =>['school.update', $school->id], 'method'=> 'put'])}}
+    {{Form::open(Route::current()->getName() === 'school.add'? ['action' => 'SchoolController@store', 'method'=> 'post'] : ['route' =>['school.update', $school->id], 'method'=> 'post'])}}
         <div class="box-body">
 
             <div class="col-md-12">

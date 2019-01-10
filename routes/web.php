@@ -23,14 +23,16 @@ Route::group(['prefix' => 'admin'], function() {
 
     Route::get('school','SchoolController@index')->name('school');
     Route::get('school/add','SchoolController@create')->name('school.add');
+    Route::post('school/store','SchoolController@store')->name('school.store');
     Route::get('school/{school}/remove','SchoolController@destroy')->name('schools.destroy');
-    Route::post('school/{school}/edit','SchoolController@edit')->name('school.edit');
-    Route::put('school/{school}/update','SchoolController@update')->name('school.update');
+    Route::get('school/{school}/edit','SchoolController@edit')->name('school.edit');
+    Route::post('school/{school}/update','SchoolController@update')->name('school.update');
 
     Route::get('skill','SkillController@index')->name('skill');
     Route::get('skill/add','SkillController@create')->name('skill.add');
+    Route::post('skill/store','SkillController@store')->name('skill.store');
     Route::get('skill/{skill}/remove','SkillController@destroy')->name('skills.destroy');
-    Route::post('skill/{skill}/edit','SkillController@edit')->name('skill.edit');
+    Route::get('skill/{skill}/edit','SkillController@edit')->name('skill.edit');
     Route::put('skill/{skill}/update','SkillController@update')->name('skill.update');
 
 
