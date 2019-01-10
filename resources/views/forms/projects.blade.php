@@ -11,15 +11,8 @@
     </div>
     <div class="input-container">
         {!! Form::label('category', 'Catégory', ['class'=>'label-learning-category']) !!}
-        {{-- {!! Form::select('category', null, ['class'=>'input-title']) !!} --}}
+        {!! Form::select('category', $categories, ['class'=>'input-title']) !!}
     </div>
-     {{-- @if(Route::current()->getName === 'home')  --}}
-        {{-- <div class="input-container">
-            {!! Form::label('category', 'Catégorie', ['class'=>'label-learning-category']) !!}
-            {!! Form::select('category', $categories, null) !!}
-            
-        </div> --}}
-    {{--  @endif  --}}
     <div class="input-container">
         {!! Form::label('image', 'Image de votre projet', ['class'=>'label-learning-title']) !!}
         {!! Form::file('image') !!}

@@ -9,9 +9,9 @@
 
                 <div class="card-body">
                     @if($errors->has('content'))
-                    @foreach($errors->all() as $error)
-                    {{$error}}
-                    @endforeach
+                        @foreach($errors->all() as $error)
+                            {{$error}}
+                        @endforeach
                     @endif
 
                       {!! Form::open( ['uri' => 'register', 'files' => true, ]) !!}

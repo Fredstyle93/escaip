@@ -61,7 +61,7 @@ class ProjectController extends Controller
         $project->subTitle = $request->subTitle;
         $project->description = $request->description;
         $project->user_id = $user->id;
-        $project->category_id = 1;
+        $project->category_id = $request->category;
 
         // dd("if");
         if($request->hasFile('image')){

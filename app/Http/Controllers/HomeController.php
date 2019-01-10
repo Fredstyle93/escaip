@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\User;
 use App\Project;
+use App\Category;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -27,6 +28,7 @@ class HomeController extends Controller
     {
         $users = User::paginate(3);
         $projects = Project::all();
-        return view('home', compact('users', 'projects'));
+        $categories = Category::pluck('title', 'id');
+        return view('home', compact('users', 'projects', 'categories'));
     }
 }
