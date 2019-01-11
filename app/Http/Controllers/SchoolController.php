@@ -47,7 +47,7 @@ class SchoolController extends Controller
 
        $school->name = $request->name;
        $school->save();
-       return redirect('school');
+       return redirect()->back();
         
     }
 
@@ -93,7 +93,7 @@ class SchoolController extends Controller
 
          $school->name = $request->input('name');
         $school->save();
-        return redirect('admin/school')->with('success', 'le Post a été mis à jour!');
+        return redirect('admin/school')->with('success', 'l\'école a été mis à jour!');
     }
 
     /**

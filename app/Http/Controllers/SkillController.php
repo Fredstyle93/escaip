@@ -45,7 +45,7 @@ class SkillController extends Controller
 
         $skill->name = $request->name;
         $skill->save();
-        return redirect('skill');
+        return redirect()->back();
     }
 
     /**
@@ -90,7 +90,7 @@ class SkillController extends Controller
 
         $skill->name = $request->input('name');
        $skill->save();
-       return redirect('admin/skill')->with('success', 'le Post a été mis à jour!');;
+       return redirect('admin/skill')->with('success', 'la compétence a été mise à jour!');;
     }
 
     /**
