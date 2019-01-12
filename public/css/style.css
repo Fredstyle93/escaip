@@ -2201,3 +2201,23 @@ input {
 .learning-hover {
   display: inline-block;
 }
+
+hr{
+    opacity: .3;
+}
+
+.connected{
+    position: absolute;
+    left: 4%;
+    bottom:36%;
+    display: block;
+    content: "";
+    height: 14px;
+    width: 14px;
+    background-color: #17ef17;
+    border-radius: 50%;
+}
+
+.list-group-item{
+    padding: 0.75rem 2.25rem!important;
+}

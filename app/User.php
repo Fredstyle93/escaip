@@ -4,6 +4,7 @@ namespace App;
 
 use App\Skill;
 use App\School;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -44,6 +45,11 @@ class User extends Authenticatable
         return $this->belongsToMany(School::class, 'school_user');
 
     }
+
+    public function isOnline()
+{
+    return Cache::has('user-is-online-' . $this->id);
+}
 
     public function projects() {
 

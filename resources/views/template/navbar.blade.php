@@ -5,8 +5,8 @@
                     <img src="{{asset('img/logo/logo.png')}}" class="logo" alt="nomSite">
                 </a>
             </div>
-    
-            
+
+
             <div class="navbar-menu">
                 @guest()
                     <nav class="navbar-menu-guest">
@@ -23,7 +23,7 @@
                     <nav class="subnav-nav">
                         <ul class="subnav-list">
                             @if(Auth::user() && Auth::user()->level ==1)
-                                <a href="{{route('admin.home')}}"> 
+                                <a href="{{route('admin.home')}}">
                                     <li class="subnav-list-items"> Menu Admin </li>
                                  </a>
                             @endif
@@ -51,7 +51,7 @@
                 </div>
             </div>
         </div>
-    
+
     </div>
-    
+
     <script type="text/javascript" src="{{asset('js/front/navbar-subnav.js')}}"></script>

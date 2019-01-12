@@ -11,7 +11,7 @@
                         <a href="{{route('profile')}}" class="sidebar-menu-link">
                             <li class="sidebar-menu-items locked {{ $tab == 'profile' ?  'sidebar-menu-items-selected' : "" }}">
                                 <div class="bg-locked">
-                                    <img src="{{asset('img/avatars/' . Auth::user()->avatar)}}" alt="{{Auth::user()->name}}" class="profil-img profil-img-sidebar">
+                                    <img src="{{ asset('img/avatars/'.Auth::user()->avatar) }}" alt="{{Auth::user()->name}}" class="profil-img profil-img-sidebar">
                                 </div>
                                 <span class="sidebar-menu-items-name">Mon profil</span>
                             </li>
@@ -37,7 +37,7 @@
                         </li>
                     </a>
                     @auth()
-                    <a href="" class="sidebar-menu-link">
+                    <a href="{{route('messagerie')}}" class="sidebar-menu-link">
                         <li class="sidebar-menu-items {{ $tab == 'portfolios' ?  'sidebar-menu-items-selected' : "" }}">
                             <span class="sprite sprite-sidebar-portfolio"></span> <span class="sidebar-menu-items-name">Messages</span>
                         </li>
