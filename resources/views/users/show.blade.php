@@ -18,7 +18,7 @@
                     <h2 class="profil-name">{{$user->firstName}} {{$user->lastName}}</h2>
 
                 </div>
-                <button class="profil-contact-btn"> <span class="sprite sprite-profil-message"></span> Contacter</button> 
+                <button class="profil-contact-btn"> <span class="sprite sprite-profil-message"></span> Contacter</button>
             </div>
         </div>
 
@@ -33,7 +33,7 @@
                     </ul>
 
                 </li>
-                <li class="details-elements"> 
+                <li class="details-elements">
                     <h4>Connaissances </h4>
                     <ul class="knowledge-list">
                         @foreach($user->skills as $userSkill)
@@ -85,8 +85,8 @@
                 </div>
             </div>
         </div>
-        
-    
+
+
             <div class="profil-container-history">
                 <div class="profil-historique row">
                     <div class="historic-grid historic-category-title col-12">
@@ -94,8 +94,8 @@
                             <p>Projets de {{$user->firstName}}</p>
                         </a>
                     </div>
-                
-                
+
+
                     <div class="content-grid col-12 col-sm-6 col-md-4 col-xl-3">
                         <a href="article.html" class="article-link">
                             <div class="historic-article article-image">
