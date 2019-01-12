@@ -1,0 +1,56 @@
+@import '../../variables/_variables';
+
+.register{
+
+}
+.register-bg-image{
+    width: 100%;
+    height: 450px;
+    background-image: url(../../../img/window-img.jpg);
+    background-size: cover;
+}
+.register-wrapper{
+    margin: 0 auto;
+    width: 670px;
+    position: relative;
+    top: -360px;
+    .register-buttons-container{
+        margin-bottom: 25px;
+        button{
+
+            &:last-child{
+                float: right;
+            }
+        }
+    }
+    .register-container{
+        padding: 20px;
+        background-color: @white;
+        border: @borderPurple;
+
+        
+        .register-header{
+            margin-bottom: 20px;
+            .register-title{
+                display: inline-block;
+
+                h1{
+                    display: inline-block;
+                    font-size: 32px;
+                }
+                p{
+                    display: inline-block;
+                    font-size: 14px;
+                    letter-spacing: 2px;
+                    letter-spacing: 1px;
+                    margin-left: 14px;
+                    vertical-align: super;
+                }
+            }
+            img{
+                float: right;
+                margin-top: 8px;
+            }
+        }
+    }
+}

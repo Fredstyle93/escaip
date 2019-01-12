@@ -6,8 +6,12 @@
 
 <body>
     <!-- --------------------------------- NAV BAR --------------------------------- -->
-
-    @include('template.navbar')
+    @if (Route::currentRouteName() == "register" || Route::currentRouteName() == "login")
+    <header class="register-bg-image"></header>
+    @else
+        @include('template.navbar')
+        
+    @endif
     {{-- @if (Route::getCurrentRoute()->uri() == '/' && Auth::guest())
         <header class="header home">
             <div class="header-image">

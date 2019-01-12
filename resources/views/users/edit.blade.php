@@ -42,7 +42,7 @@
                                 @foreach($skills as $skill)
                                     {{Form::label('checkBox', "$skill->name")}}
                                     {{Form::checkbox('checkbox[]', $skill->id,false,["class" => "form-group"])}}
-                                    @endforeach
+                                @endforeach
 
                             </div>
 

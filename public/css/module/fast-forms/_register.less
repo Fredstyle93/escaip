@@ -24,43 +24,65 @@
 
         .fast-register-form{
             padding-top: 10px; 
-            .register-input-container{
-                margin-bottom: 15px;
-
-                &:nth-child(3){
-                    display: inline-block;
-                    width: 45%;
-                }
-                &:nth-child(4){
-                    // display: inline-block;
-                    width: 45%;
-                    float: right;
-                }
-                label{
-                    color: @purple;
-                }
-                input{
-                    border: none;
-                    background-color: transparent;
-                    border-bottom: @borderPurple;
-                    border-radius: 0px;
-                    /* display: inline; */
-                    width: 100%;
-
-                }
-
-            }
-
-            button{
-                background-color: #986ece;
-                border: none;
-                padding: 9px 10px;
-                color: #ffffff;
-                border-radius: 8px;
-                font-weight: 500;
-                margin-top: 10px;
-                font-size: 13px;
-            }
+            
+            
         }
     }
+}
+form{
+    button{
+        background-color: #986ece;
+        border: none;
+        padding: 9px 10px;
+        color: #ffffff;
+        border-radius: 8px;
+        font-weight: 500;
+        margin-top: 10px;
+        font-size: 13px;
+    }
+}
+.fast-register{
+    .register-input-container{
+        &:nth-child(3){
+            display: inline-block;
+            width: 48%;
+        }
+        &:nth-child(4){
+            // display: inline-block;
+            width: 48%;
+            float: right;
+        }
+    }
+
+}
+.register-body{
+    .register-input-container{
+        &:first-child{
+            display: inline-block;
+            width: 48%;
+        }
+        &:nth-child(2){
+            // display: inline-block;
+            width: 48%;
+            float: right;
+        }
+    }
+}
+.register-input-container{
+    margin-bottom: 15px;
+
+    
+    label{
+        color: @purple;
+    }
+    input{
+        border: none;
+        background-color: transparent;
+        border-bottom: @borderPurple;
+        border-radius: 0px;
+        /* display: inline; */
+        width: 100%;
+
+    }
+
 }

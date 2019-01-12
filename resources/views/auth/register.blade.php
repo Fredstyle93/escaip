@@ -1,6 +1,68 @@
 @extends('layouts.app')
 
 @section('content')
+
+<div class="register-wrapper">
+    <div class="register-buttons-container">
+        <button>Retour</button>
+        <button>Se connecter</button>
+    </div>
+    <div class="register-container">
+        <div class="register-header">
+            <div class="register-title">
+                <h1>Bienvenue !</h1>
+                <p> - Inscription</p>
+            </div>
+            <img src="{{asset('img/logo/logo.png')}}" alt="escaip">
+        </div>
+        <div class="register-body">
+            <div class="register-input-container">
+                {!! Form::label('firstName', 'Prénom') !!}
+                {!! Form::text('firstName', null) !!}
+            </div>
+            <div class="register-input-container">
+                {!! Form::label('lastName', 'Nom') !!}
+                {!! Form::text('lastName', null) !!}
+            </div>
+            <div class="register-input-container">
+                {!! Form::label('email', 'Adresse Courriel') !!}
+                {!! Form::email('email', null) !!}
+            </div>
+            <div class="register-more-infos">
+                <div class="register-input-container">
+                    {!! Form::label('sexe', 'Sexe') !!}
+                    <div class="checkbox-container">
+                        {!! Form::label('male', 'Homme', ['checkbox-label']) !!}
+                        {!! Form::checkbox('male', 1) !!}
+                    </div>
+                    <div class="checkbox-container">
+                        {!! Form::label('female', 'Femme', ['checkbox-label']) !!}
+                        {!! Form::checkbox('female', 2) !!}
+                    </div>
+                    <div class="checkbox-container">
+                        {!! Form::label('notDefined', 'Indéfini', ['checkbox-label']) !!}
+                        {!! Form::checkbox('notDefined', 3) !!}
+                    </div>
+                </div>
+                <div class="register-input-container">
+                    
+    
+                </div>
+            </div>
+            <div class="register-password-container">
+                <div class="register-input-container">
+                    
+    
+                </div>
+                <div class="register-input-container">
+                    
+    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -147,5 +209,5 @@
             </div>
         </div>
     </div>
-</div>
+</div>-->
 @endsection
