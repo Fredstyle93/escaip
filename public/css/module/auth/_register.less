@@ -30,7 +30,7 @@
 
         
         .register-header{
-            margin-bottom: 20px;
+            margin-bottom: 50px;
             .register-title{
                 display: inline-block;
 
@@ -50,6 +50,46 @@
             img{
                 float: right;
                 margin-top: 8px;
+            }
+        }
+        .register-body{
+            .register-more-infos{
+                width: 45%;
+                display: inline-block;
+                .register-input-container{
+                    width: 100%;
+                    float: none;
+                    &:first-child{
+                        margin-bottom: 28px;
+                    }
+                    .more-infos-label{
+                        color: @purple;
+                        margin-bottom: 10px;
+                    }
+                    .checkbox-container{
+                        display: inline-block;
+                        margin-right: 12px;
+                        label{
+                            color: @fontColor;
+                            font-size: 13px;
+                            font-weight: 400;
+                        }
+                    }
+                }
+                // .register-input-container{
+                //     width: 100%;
+                //     float: none;
+                // }
+            }
+            .register-password-container{
+                width: 55%;
+                float: right;
+                vertical-align: top;
+                .register-input-container{
+                    width: 100%;
+                    float: none;
+                    display: block;
+                }
             }
         }
     }

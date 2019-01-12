@@ -16,49 +16,67 @@
             <img src="{{asset('img/logo/logo.png')}}" alt="escaip">
         </div>
         <div class="register-body">
-            <div class="register-input-container">
-                {!! Form::label('firstName', 'Prénom') !!}
-                {!! Form::text('firstName', null) !!}
-            </div>
-            <div class="register-input-container">
-                {!! Form::label('lastName', 'Nom') !!}
-                {!! Form::text('lastName', null) !!}
-            </div>
-            <div class="register-input-container">
-                {!! Form::label('email', 'Adresse Courriel') !!}
-                {!! Form::email('email', null) !!}
-            </div>
-            <div class="register-more-infos">
+                @if($errors->has('content'))
+                @foreach($errors->all() as $error)
+                    {{$error}}
+                @endforeach
+            @endif
+                {!! Form::open( ['uri' => 'register', 'files' => true, ]) !!}
+                {{--  @csrf  --}}
                 <div class="register-input-container">
-                    {!! Form::label('sexe', 'Sexe') !!}
-                    <div class="checkbox-container">
-                        {!! Form::label('male', 'Homme', ['checkbox-label']) !!}
-                        {!! Form::checkbox('male', 1) !!}
+                    {!! Form::label('firstName', 'Prénom') !!}
+                    {!! Form::text('firstName', null) !!}
+                </div>
+                <div class="register-input-container">
+                    {!! Form::label('lastName', 'Nom') !!}
+                    {!! Form::text('lastName', null) !!}
+                </div>
+                <div class="register-input-container">
+                    {!! Form::label('userName', 'Pseudo') !!}
+                    {!! Form::text('userName', null) !!}
+                </div>
+                <div class="register-input-container">
+                    {!! Form::label('email', 'Adresse Courriel') !!}
+                    {!! Form::email('email', null) !!}
+                </div>
+                <div class="register-more-infos">
+                    <div class="register-input-container">
+                        {!! Form::label('sexe', 'Sexe', ['class'=>'more-infos-label']) !!}
+                        <div class="checkbox-container">
+                            {!! Form::label('male', 'Homme', ['checkbox-label']) !!}
+                            {!! Form::checkbox('male', 1) !!}
+                        </div>
+                        <div class="checkbox-container">
+                            {!! Form::label('female', 'Femme', ['checkbox-label']) !!}
+                            {!! Form::checkbox('female', 2) !!}
+                        </div>
+                        <div class="checkbox-container">
+                            {!! Form::label('notDefined', 'Indéfini', ['checkbox-label']) !!}
+                            {!! Form::checkbox('notDefined', 3) !!}
+                        </div>
                     </div>
-                    <div class="checkbox-container">
-                        {!! Form::label('female', 'Femme', ['checkbox-label']) !!}
-                        {!! Form::checkbox('female', 2) !!}
-                    </div>
-                    <div class="checkbox-container">
-                        {!! Form::label('notDefined', 'Indéfini', ['checkbox-label']) !!}
-                        {!! Form::checkbox('notDefined', 3) !!}
+                    <div class="register-input-container">
+                            {!! Form::label('school', 'École') !!}
+                            {!! Form::select("school", $school->pluck('name'), ['id' => 'name']) !!}
                     </div>
                 </div>
-                <div class="register-input-container">
-                    
-    
+                <div class="register-password-container">
+                    <div class="register-input-container">
+                        <label for="password" >{{ __('Mot de passe') }}</label>
+                        <input id="password" type="password" class="{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+                    </div>
+                    <div class="register-input-container">
+                        <label for="password-confirm">{{ __('Confirmer le mot de passe') }}</label>
+                        <input id="password-confirm" type="password"  name="password_confirmation" required>
+                    </div>
                 </div>
-            </div>
-            <div class="register-password-container">
-                <div class="register-input-container">
-                    
-    
-                </div>
-                <div class="register-input-container">
-                    
-    
-                </div>
-            </div>
+                <div class="register-footer">
+                        <button>Sinscrire</button>
+                    </div>
+            {!! Form::close() !!}
+        </div>
+        <div class="register-footer">
+            <button>Sinscrire</button>
         </div>
     </div>
 </div>

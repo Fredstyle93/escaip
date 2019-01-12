@@ -628,7 +628,7 @@ input {
   border: 1px solid rgba(166, 147, 204, 0.4);
 }
 .register-wrapper .register-container .register-header {
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 .register-wrapper .register-container .register-header .register-title {
   display: inline-block;
@@ -648,6 +648,40 @@ input {
 .register-wrapper .register-container .register-header img {
   float: right;
   margin-top: 8px;
+}
+.register-wrapper .register-container .register-body .register-more-infos {
+  width: 45%;
+  display: inline-block;
+}
+.register-wrapper .register-container .register-body .register-more-infos .register-input-container {
+  width: 100%;
+  float: none;
+}
+.register-wrapper .register-container .register-body .register-more-infos .register-input-container:first-child {
+  margin-bottom: 28px;
+}
+.register-wrapper .register-container .register-body .register-more-infos .register-input-container .more-infos-label {
+  color: #986ece;
+  margin-bottom: 10px;
+}
+.register-wrapper .register-container .register-body .register-more-infos .register-input-container .checkbox-container {
+  display: inline-block;
+  margin-right: 12px;
+}
+.register-wrapper .register-container .register-body .register-more-infos .register-input-container .checkbox-container label {
+  color: #7f7f7f;
+  font-size: 13px;
+  font-weight: 400;
+}
+.register-wrapper .register-container .register-body .register-password-container {
+  width: 55%;
+  float: right;
+  vertical-align: top;
+}
+.register-wrapper .register-container .register-body .register-password-container .register-input-container {
+  width: 100%;
+  float: none;
+  display: block;
 }
 .calendar {
   padding: 0;
@@ -2029,7 +2063,7 @@ input {
 .fast-register {
   padding: 20px 35px;
   max-width: 670px;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.9);
   border-radius: 29px;
   position: relative;
   top: 94px;
@@ -2059,6 +2093,9 @@ form button {
   margin-top: 10px;
   font-size: 13px;
 }
+.fast-register .register-input-container {
+  margin-bottom: 15px;
+}
 .fast-register .register-input-container:nth-child(3) {
   display: inline-block;
   width: 48%;
@@ -2067,16 +2104,16 @@ form button {
   width: 48%;
   float: right;
 }
-.register-body .register-input-container:first-child {
+.register-body .register-input-container {
+  margin-bottom: 45px;
+}
+.register-body .register-input-container:nth-child(2) {
   display: inline-block;
   width: 48%;
 }
-.register-body .register-input-container:nth-child(2) {
-  width: 48%;
+.register-body .register-input-container:nth-child(3) {
   float: right;
-}
-.register-input-container {
-  margin-bottom: 15px;
+  width: 48%;
 }
 .register-input-container label {
   color: #986ece;
