@@ -18,6 +18,16 @@
                     <h2 class="profil-name">{{$user->firstName}} {{$user->lastName}}</h2>
 
                 </div>
+                
+                {!! Form::open(['style' => 'display:inline']) !!}
+                    @if (Auth::user()->hasSentFriendRequestTo($user))
+                        <button class="profil-contact-btn" name="cancel"> <span class="sprite sprite-profil-message" ></span> Annuler la demande dami</button>
+                    @else
+                        <button class="profil-contact-btn" name="send"> <span class="sprite sprite-profil-message"></span> Envoyer une demande dami</button>
+                    @endif
+                
+                {!! Form::close() !!}
+                
                 <button class="profil-contact-btn"> <span class="sprite sprite-profil-message"></span> Contacter</button>
             </div>
         </div>

@@ -6,12 +6,14 @@ use App\Skill;
 use App\School;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Notifications\Notifiable;
+use Hootlex\Friendships\Traits\Friendable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
     use Notifiable;
+    use Friendable;
 
     /**
      * The attributes that are mass assignable.
@@ -28,7 +30,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'password', 'remember_token', 'status'
     ];
 
     public function skills()
@@ -44,6 +46,10 @@ class User extends Authenticatable
 
         return $this->belongsToMany(School::class, 'school_user');
 
+    }
+
+    public function friendships(){
+        return $this->hasMany('App\Friendship');
     }
 
     public function isOnline()

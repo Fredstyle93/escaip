@@ -30,6 +30,12 @@ class CreateUsersTable extends Migration
             $table->integer('level')->default('0');  // verifier admin 0 = membre normal
             $table->rememberToken();
             $table->timestamps();
+
+            // $table->integer('friendship_id')->unsigned();
+        
+            // $table->foreign('friendship_id')->references('id')->on('friendships')
+        
+            //     ->onDelete('cascade');
         });
     }
 

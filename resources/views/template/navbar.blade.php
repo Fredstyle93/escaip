@@ -27,6 +27,9 @@
                                     <li class="subnav-list-items"> Menu Admin </li>
                                  </a>
                             @endif
+                            <a href="{{route('requests.index')}}">
+                                <li class="subnav-list-items">Demandes de contacts</li>
+                            </a>
                             {{-- <a href="{{route('requests')}}"><li class="subnav-list-items"><span></span>Demandes de contact</li></a> --}}
                             <a><li class="subnav-list-items"><span></span>Aide</li></a>
                             @if(Auth::check())

@@ -1,5 +1,7 @@
 <?php
 
+use App\User;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -47,9 +49,11 @@ Route::group(['prefix' => 'users'], function() {
     Route::get('', 'UserController@index');
     Route::post('create', 'UserController@store')->name('user.store');
     Route::get('{user}', 'UserController@show')->name('user.show');
+    Route::post('{user}', 'FriendshipController@sendFriendRequest')->name('user.show');
     Route::get('{user}/delete', 'UserController@destroy')->name('user.destroy');
 });
 
+Route::get('requests', 'FriendshipController@showRequests')->name('requests.index');
 
 
 /**

@@ -4,8 +4,12 @@
 
 <div class="register-wrapper">
     <div class="register-buttons-container">
-        <button>Retour</button>
-        <button>Se connecter</button>
+        {{-- <a href="{{ URL::previous() }}"> --}}
+            <button>Retour</button>
+        {{-- </a> --}}
+        {{-- <a href=""> --}}
+            <button>Se connecter</button>
+        {{-- </a> --}}
     </div>
     <div class="register-container">
         <div class="register-header">

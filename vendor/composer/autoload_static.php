@@ -122,6 +122,7 @@ class ComposerStaticInit1a8c13e10746037c44b3ccf0915eb9e3
             'Http\\Promise\\' => 13,
             'Http\\Client\\' => 12,
             'Http\\Adapter\\Guzzle6\\' => 21,
+            'Hootlex\\Friendships\\' => 20,
         ),
         'G' => 
         array (
@@ -339,6 +340,10 @@ class ComposerStaticInit1a8c13e10746037c44b3ccf0915eb9e3
         'Http\\Adapter\\Guzzle6\\' => 
         array (
             0 => __DIR__ . '/..' . '/php-http/guzzle6-adapter/src',
+        ),
+        'Hootlex\\Friendships\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/hootlex/laravel-friendships/src',
         ),
         'GuzzleHttp\\Psr7\\' => 
         array (
@@ -1187,6 +1192,11 @@ class ComposerStaticInit1a8c13e10746037c44b3ccf0915eb9e3
         'Hamcrest\\Type\\IsString' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Type/IsString.php',
         'Hamcrest\\Util' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Util.php',
         'Hamcrest\\Xml\\HasXPath' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Xml/HasXPath.php',
+        'Hootlex\\Friendships\\FriendshipsServiceProvider' => __DIR__ . '/..' . '/hootlex/laravel-friendships/src/FriendshipsServiceProvider.php',
+        'Hootlex\\Friendships\\Models\\FriendFriendshipGroups' => __DIR__ . '/..' . '/hootlex/laravel-friendships/src/Models/FriendFriendshipGroups.php',
+        'Hootlex\\Friendships\\Models\\Friendship' => __DIR__ . '/..' . '/hootlex/laravel-friendships/src/Models/Friendship.php',
+        'Hootlex\\Friendships\\Status' => __DIR__ . '/..' . '/hootlex/laravel-friendships/src/Status.php',
+        'Hootlex\\Friendships\\Traits\\Friendable' => __DIR__ . '/..' . '/hootlex/laravel-friendships/src/Traits/Friendable.php',
         'Http\\Adapter\\Guzzle6\\Client' => __DIR__ . '/..' . '/php-http/guzzle6-adapter/src/Client.php',
         'Http\\Adapter\\Guzzle6\\Promise' => __DIR__ . '/..' . '/php-http/guzzle6-adapter/src/Promise.php',
         'Http\\Client\\Exception' => __DIR__ . '/..' . '/php-http/httplug/src/Exception.php',
