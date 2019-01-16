@@ -42,11 +42,16 @@ class FriendshipController extends Controller
 
     public function replyRequest(Guard $auth, Request $request){
         $user = $auth->user();
-        // $sender = User::find($request->sender);
-        dd($request->sender);
-        // dd($sender);
-        $user->acceptFriendRequest($sender);
         $friendRequest = $user->getPendingFriendships();
-        return view('requests.index', compact('friendRequest'));
+        $sender = User::find($friendRequest[0]->sender_id);
+
+          if($request->has('accept')){
+
+              $user->acceptFriendRequest($sender);
+          }else{
+            $user->denyFriendRequest($sender);
+          }
+
+        return view('requests.index', compact('friendRequest' ));
     }
 }
