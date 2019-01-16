@@ -4,13 +4,14 @@
 @include('template.head')
 
 
-<body>
+<body style="{{Route::currentRouteName() == 'login' ? 'background-image:url(img/window-img.jpg);background-size:cover;height: 1080px;' : ''}}">
     <!-- --------------------------------- NAV BAR --------------------------------- -->
-    @if (Route::currentRouteName() == "register" || Route::currentRouteName() == "login")
-    <header class="register-bg-image"></header>
+    
+    @if (Route::currentRouteName() == "register" )
+        <header class="register-bg-image"></header>
+    @elseif( Route::currentRouteName() == "login")
     @else
         @include('template.navbar')
-        
     @endif
     {{-- @if (Route::getCurrentRoute()->uri() == '/' && Auth::guest())
         <header class="header home">
@@ -80,7 +81,11 @@
             </div>
         </div>
     </div>
-    @include('template.footer')
+    @if (Route::currentRouteName() == "register" || Route::currentRouteName() == "login")
+    
+    @else
+        @include('template.footer')
+    @endif
 
     <script src="{{asset('https://code.jquery.com/jquery-3.2.1.slim.min.js')}}" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="{{asset('https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js')}}" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>

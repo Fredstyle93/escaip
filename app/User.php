@@ -49,7 +49,7 @@ class User extends Authenticatable
     }
 
     public function friendships(){
-        return $this->hasMany('App\Friendship');
+        return $this->hasMany('Hootlex\Friendships\Models\Friendship');
     }
 
     public function isOnline()
