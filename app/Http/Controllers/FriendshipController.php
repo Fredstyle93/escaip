@@ -29,12 +29,24 @@ class FriendshipController extends Controller
     public function showRequests(Guard $auth){
         $user = $auth->user();
         $friendRequest = $user->getPendingFriendships();
-        // dd($friendRequest->get());
-        $collection = collect($friendRequest);
-        dd($collection->get('0')->get('attributes'));
-        $users = User::where('id', '=', $friendRequest->sender_id)->get();
-        dd($users);
+        // $users = App\User::find($request->sender_id);
+        // dd($users);
+        // // dd($friendRequest->get());
+        // $collection = collect($friendRequest);
+        // dd($collection->get('0')->get('attributes'));
+        // $users = User::where('id', '=', $friendRequest->sender_id)->get();
+        // dd($users);
         // $friendRequestUser = Friendship::where('sender_id', '=', '');
-        // return view('requests.index', compact('friendRequest'));
+        return view('requests.index', compact('friendRequest'));
+    }
+
+    public function replyRequest(Guard $auth, Request $request){
+        $user = $auth->user();
+        // $sender = User::find($request->sender);
+        dd($request->sender);
+        // dd($sender);
+        $user->acceptFriendRequest($sender);
+        $friendRequest = $user->getPendingFriendships();
+        return view('requests.index', compact('friendRequest'));
     }
 }

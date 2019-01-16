@@ -54,6 +54,7 @@ Route::group(['prefix' => 'users'], function() {
 });
 
 Route::get('requests', 'FriendshipController@showRequests')->name('requests.index');
+Route::post('requests', 'FriendshipController@replyRequest')->name('requests.index');
 
 
 /**
