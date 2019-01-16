@@ -16,7 +16,7 @@ class FriendshipController extends Controller
         $requester = $auth->user();
         $user = User::findOrFail($id);
         $recipient = $user;
-        
+
         if($request->has('send')){
             $requester->befriend($recipient);
         }else if ($request->has('cancel')){

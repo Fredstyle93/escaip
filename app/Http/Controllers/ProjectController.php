@@ -41,12 +41,12 @@ class ProjectController extends Controller
     {
         $project = new Project();
         $user = $auth->user();
-        
+
         // dd($request);
 
 
-        /** 
-         * 
+        /**
+         *
          * validation à revoir
         */
 
@@ -56,7 +56,7 @@ class ProjectController extends Controller
         //     'description' => 'min:3',
         //     'imageProject' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         // ]);
-            
+
         $project->title = $request->title;
         $project->subTitle = $request->subTitle;
         $project->description = $request->description;
@@ -72,7 +72,7 @@ class ProjectController extends Controller
             $project->imageProject = $imageName;
         }
         $project->save();
-        return redirect()->back();
+        return redirect()->back()->with('message', 'Vous avez ajouté un projet');
     }
 
     /**

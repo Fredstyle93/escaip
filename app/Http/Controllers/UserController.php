@@ -32,7 +32,7 @@ class UserController extends Controller
     }
 
 
-    
+
 
     /**
      * Show the form for creating a new resource.
@@ -62,10 +62,10 @@ class UserController extends Controller
             "lastName"=>"required",
             "firstName"=>"required",
           ]);
-          
+
         $user = new User();
-       
-    
+
+
         $user->firstName = $request->firstName;
         $user->email = $request->email;
         $user->lastName = $request->lastName;
@@ -77,19 +77,19 @@ class UserController extends Controller
             $avatarName = time() . '.' . $avatar->getClientOriginalExtension();
             $location = public_path('img/avatars/' . $avatarName);
             Image::make($avatar)->fit(950, 960)->save($location);
-            
+
             $user->avatar = $avatarName;
-            
-           
-        
+
+
+
             }
-            
+
 
             $user->save();
 
            $connection = User::find($user->id);
            Auth::login($connection);
-            return view('users.index', compact('users'));
+            return view('users.index', compact('users'))->with('message', 'vous Avez bien créé votre profil!');
 
     }
 
@@ -138,29 +138,29 @@ class UserController extends Controller
      */
     public function update(Request $request, Guard $auth)
     {
-        
+
         $user = $auth->user();
         $user->lastName = $request->input('lastName');
         $user->firstName = $request->input('firstName');
         $user->description = $request->input('description');
         // $user->avatar = $request->input('avatar');
-        
+
          if(Input::get('school') !== null){
              $schoolData = Input::get('school');
             $user->schools()->sync($schoolData+1);
             //  DB::table('school_user')
             //  ->where('user_id', $auth->user()->id)
             //  ->update([
-            //      "school_id" => 
+            //      "school_id" =>
             //  ]);
- 
+
 
              //$user->schools()->sync($schoolData);
          }
          if(Input::get('checkbox') !== null){
-            
+
             $data = Input::get('checkbox');
-            
+
                 $user->skills()->sync($data);
          }
 
@@ -171,13 +171,13 @@ class UserController extends Controller
         Image::make($avatar)->fit(950, 960)->save($location);
 
         $user->avatar = $avatarName;
-        
-        
+
+
     }
     $user->save();
-    return redirect()->route('profile');
+    return redirect()->route('profile')->with('message', 'vous Avez bien modifié votre profil!');
 }
-    
+
 
     /**
      * Remove the specified resource from storage.

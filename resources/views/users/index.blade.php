@@ -1,6 +1,9 @@
 {{-- @extends('template.content')
 
 @section('main') --}}
+
+    @include ('flash.flash')
+
   <div class="portfolio-wrapper">
       <div class="students-header col-12">
           <a href="portfolio.html">
@@ -30,7 +33,7 @@
                       </div>
                   </div>
               </div>
-              
+
           @endforeach
       </div>
   </div>

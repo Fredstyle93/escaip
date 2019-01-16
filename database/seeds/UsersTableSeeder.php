@@ -22,7 +22,6 @@ class UsersTableSeeder extends Seeder
       $userFred->password = bcrypt("fruit123");
       $userFred->level = 1;
       $userFred->posts = 45;
-      $userFred->avatar = "1534278075";
       $userFred->interactions = 108;
       $userFred->helps = 12;
       $userFred->description = "Admin";
@@ -57,7 +56,7 @@ class UsersTableSeeder extends Seeder
             'description'=> "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non massa ac sapien luctus tempor et sit amet dui. Pellentesque eu libero ultrices, dignissim erat eu, condimentum lacus. Curabitur eget luctus magna. Phasellus pellentesque orci odio, quis porttitor urna scelerisque in. Aliquam eleifend, erat vel iaculis mollis, urna lorem mollis leo, et pellentesque elit odio ultrices risus. ",
             'email'=> "John$i@Doe.com",
             'email'=> "John$i@Doe.com",
-            
+
 
         ]);
     }
