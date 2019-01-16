@@ -604,12 +604,6 @@ input {
 .admin .admin-section-add .admin-menu-add .admin-menu-links .admin-menu-add-items:hover {
   background-color: rgba(166, 147, 204, 0.05);
 }
-.login-bg-image {
-  width: 100%;
-  height: 100%;
-  background-image: url(../../../img/window-img.jpg);
-  background-size: cover;
-}
 .register-bg-image {
   width: 100%;
   height: 450px;
@@ -628,10 +622,8 @@ input {
 .register-wrapper .register-buttons-container button {
   background-color: transparent;
   color: #ffffff;
+  color: 20px;
   cursor: pointer;
-  border: none;
-  font-weight: 700;
-  font-size: 20px;
 }
 .register-wrapper .register-buttons-container button:last-child {
   float: right;
@@ -697,59 +689,39 @@ input {
   float: none;
   display: block;
 }
-.login-wrapper {
-  margin: 0 auto;
-  width: 670px;
-  position: relative;
-  top: 110px;
-}
-.login-wrapper .login-buttons-container {
-  margin-bottom: 25px;
-}
-.login-wrapper .login-buttons-container button {
-  background-color: transparent;
-  color: #ffffff;
-  cursor: pointer;
-  border: none;
-  font-weight: 700;
-  font-size: 20px;
-}
-.login-wrapper .login-buttons-container button:last-child {
-  float: right;
-}
-.login-wrapper .login-container {
+.login-container {
   padding: 50px;
   background-color: #ffffff;
   border: 1px solid rgba(166, 147, 204, 0.4);
 }
-.login-wrapper .login-container .login-header {
+.login-container .login-header {
   margin-bottom: 50px;
 }
-.login-wrapper .login-container .login-header .login-title {
+.login-container .login-header .login-title {
   display: inline-block;
 }
-.login-wrapper .login-container .login-header .login-title h1 {
+.login-container .login-header .login-title h1 {
   display: inline-block;
   font-size: 32px;
 }
-.login-wrapper .login-container .login-header .login-title p {
+.login-container .login-header .login-title p {
   display: inline-block;
   font-size: 14px;
   letter-spacing: 2px;
   letter-spacing: 1px;
   vertical-align: baseline;
 }
-.login-wrapper .login-container .login-header img {
+.login-container .login-header img {
   float: right;
   margin-top: 8px;
 }
-.login-wrapper .login-container .login-body .login-input-container {
+.login-container .login-body .login-input-container {
   margin-bottom: 30px;
 }
-.login-wrapper .login-container .login-body .login-input-container label {
+.login-container .login-body .login-input-container label {
   color: #986ece;
 }
-.login-wrapper .login-container .login-body .login-input-container input {
+.login-container .login-body .login-input-container input {
   width: 100%;
   background: transparent;
   border: none;

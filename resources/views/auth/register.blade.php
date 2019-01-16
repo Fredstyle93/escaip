@@ -79,9 +79,6 @@
                     </div>
             {!! Form::close() !!}
         </div>
-        <div class="register-footer">
-            <button>Sinscrire</button>
-        </div>
     </div>
 </div>
 <!--

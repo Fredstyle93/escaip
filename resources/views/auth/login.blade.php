@@ -1,6 +1,41 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="login-wrapper">
+    <div class="login-buttons-container">
+        {{-- <a href="{{ URL::previous() }}"> --}}
+            <button>Retour</button>
+        {{-- </a> --}}
+        {{-- <a href=""> --}}
+            <button>Sinscrire</button>
+        {{-- </a> --}}
+    </div>
+    <div class="login-container">
+        <div class="login-header">
+            <div class="login-title">
+                <p>Connexion</p>
+            </div>
+            <img src="{{asset('img/logo/logo.png')}}" alt="escaip">
+        </div>
+        <div class="login-body">
+            
+            {!! Form::open(['uri' => 'login']) !!}
+            <div class="login-input-container">
+                {!! Form::label('email', 'Adresse e-mail') !!}
+                {!! Form::text('email', null) !!}
+            </div>
+            <div class="login-input-container">
+                {!! Form::label('password', 'Mot de passe') !!}
+                <input id="password" type="password" class="{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+            </div>
+            <div class="register-footer">
+                    <button>Se connecter</button>
+                </div>
+            {!! Form::close() !!}
+        </div>
+    </div>
+</div>
+<!--
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -70,4 +105,5 @@
         </div>
     </div>
 </div>
+-->
 @endsection
