@@ -38,3 +38,6 @@
       </div>
   </div>
 {{-- @endsection --}}
+@section('sidebar')
+    @include('template.sidebar', ['tab' => 'profile'])
+@endsection

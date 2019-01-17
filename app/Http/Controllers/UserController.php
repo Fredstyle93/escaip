@@ -31,6 +31,11 @@ class UserController extends Controller
         return view('admin.users.index', compact('users'));
     }
 
+    public function showFriend(User $user){
+        $friendlist = $user->getFriends();
+        return view('users.friends', compact('user','friendlist'));
+    }
+
 
 
 

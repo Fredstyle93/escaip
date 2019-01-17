@@ -19,11 +19,20 @@ class FriendshipController extends Controller
 
         if($request->has('send')){
             $requester->befriend($recipient);
+
         }else if ($request->has('cancel')){
             $request = Friendship::where('sender_id', '=', $requester->id)->delete();
         }
 
         return view('users.show', compact('user'));
+    }
+
+    public function removeFriend(Guard $auth , User $user){
+        $presentuser = $auth->user();
+        $presentuser->unfriend($user);
+
+        return redirect()->back();
+
     }
 
     public function showRequests(Guard $auth){

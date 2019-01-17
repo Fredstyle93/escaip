@@ -18,16 +18,30 @@
                     <h2 class="profil-name">{{$user->firstName}} {{$user->lastName}}</h2>
 
                 </div>
-                
+                @if(!Auth::user()->isFriendWith($user))
                 {!! Form::open(['style' => 'display:inline']) !!}
                     @if (Auth::user()->hasSentFriendRequestTo($user))
                         <button class="profil-contact-btn" name="cancel"> <span class="sprite sprite-profil-message" ></span> Annuler la demande dami</button>
                     @else
                         <button class="profil-contact-btn" name="send"> <span class="sprite sprite-profil-message"></span> Envoyer une demande dami</button>
                     @endif
-                
+                @else
+                <div class="dropdown">
+                    <button class="profil-contact-btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="sprite sprite-profil-message" ></span>
+                      {{ $user->firstName }}
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="{{ route('conversations.show', ['user'=> $user]) }}">Contacter</a>
+                      <a class="dropdown-item" href="#">Bloquer</a>
+                      <a class="dropdown-item" href="{{ route('friend.remove' , [Auth::user() , 'user'=>$user]) }}">Retirer des amis</a>
+                    </div>
+                  </div>
+
+
+                @endif
                 {!! Form::close() !!}
-                
+
                 <button class="profil-contact-btn"> <span class="sprite sprite-profil-message"></span> Contacter</button>
             </div>
         </div>
@@ -71,7 +85,7 @@
                     <img src="img/users/user01.jpg" alt="" class="contacts-image contacts-image-1">
                     <img src="img/users/user02.jpg" alt="" class="contacts-image contacts-image-2">
                     <img src="img/users/user03.jpg" alt="" class="contacts-image contacts-image-3">
-                    <span class="contacts-number"> 25+ </span>
+                   <span class="contacts-number"> ({{ $user->getFriendsCount() }}) </span>
                 </p>
             </div>
         </div>

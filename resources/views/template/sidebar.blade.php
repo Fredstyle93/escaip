@@ -42,6 +42,11 @@
                             <span class="sprite sprite-sidebar-portfolio"></span> <span class="sidebar-menu-items-name">Messages</span>
                         </li>
                     </a>
+                    <a href="{{route('friend',Auth::user())}}" class="sidebar-menu-link">
+                        <li class="sidebar-menu-items {{ $tab == 'portfolios' ?  'sidebar-menu-items-selected' : "" }}">
+                            <span class="sprite sprite-sidebar-portfolio"></span> <span class="sidebar-menu-items-name">Amis</span>
+                        </li>
+                    </a>
                     @endauth
                 </div>
             </ul>
