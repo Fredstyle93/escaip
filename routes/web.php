@@ -64,6 +64,7 @@ Route::group(['middleware'=>'auth'],function(){
     Route::get('/messagerie', 'ConversationsController@index')->name('messagerie');
     Route::get('{user}/amis', 'UserController@showFriend')->name('friend');
     Route::get('{user}/amis/remove/{usager}', 'FriendshipController@removeFriend')->name('friend.remove'); //Check ça fab
+    Route::get('{user}/amis/block/{usager}', 'FriendshipController@blockFriend')->name('friend.block'); //Check ça fab
         Route::get('/conversations', 'ConversationsController@index')->name('conversations');
         Route::get('/conversations/{user}', 'ConversationsController@show')
         ->name('conversations.show')

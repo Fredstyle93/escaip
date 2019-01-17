@@ -33,7 +33,7 @@
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                       <a class="dropdown-item" href="{{ route('conversations.show', ['user'=> $user]) }}">Contacter</a>
-                      <a class="dropdown-item" href="#">Bloquer</a>
+                      <a class="dropdown-item" href="{{ route('friend.block' , [Auth::user() , 'user'=>$user]) }}">Bloquer</a>
                       <a class="dropdown-item" href="{{ route('friend.remove' , [Auth::user() , 'user'=>$user]) }}">Retirer des amis</a>
                     </div>
                   </div>

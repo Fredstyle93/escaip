@@ -34,6 +34,13 @@ class FriendshipController extends Controller
         return redirect()->back();
 
     }
+    public function blockFriend(Guard $auth , User $user){
+        $presentuser = $auth->user();
+        $presentuser->blockfriend($user);
+
+        return redirect()->back();
+
+    }
 
     public function showRequests(Guard $auth){
         $user = $auth->user();
@@ -60,7 +67,7 @@ class FriendshipController extends Controller
           }else{
             $user->denyFriendRequest($sender);
           }
-
-        return view('requests.index', compact('friendRequest' ));
+          return redirect()->back()->with(['friendRequest'=>$friendRequest]);
+       // return view('requests.index', compact('friendRequest' ));
     }
 }
